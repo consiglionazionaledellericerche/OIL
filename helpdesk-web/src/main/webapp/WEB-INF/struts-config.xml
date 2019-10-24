@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+                               "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+<struts-config>
+ <data-sources/>
+ <form-beans>
+  <form-bean name="LoginForm" type="it.cnr.helpdesk.UserManagement.ActionForms.LoginForm">
+   <form-property name="password" type="java.lang.String"/>
+   <form-property name="login" type="java.lang.String"/>
+  </form-bean>
+  <form-bean name="CreateUserForm" type="it.cnr.helpdesk.UserManagement.ActionForms.CreateUserForm">
+   <form-property name="password" type="java.lang.String"/>
+   <form-property name="login" type="java.lang.String"/>
+   <form-property name="cognome" type="java.lang.String"/>
+   <form-property name="strutturaDescrizione" type="java.lang.String"/>
+   <form-property name="nome" type="java.lang.String"/>
+   <form-property name="telefono" type="java.lang.String"/>
+   <form-property name="mail_stop" type="java.lang.String"/>
+   <form-property name="profilo" type="java.lang.String"/>
+   <form-property name="e_mail" type="java.lang.String"/>
+   <form-property name="struttura" type="java.lang.String"/>
+  </form-bean>
+  <form-bean name="UpdateUserForm" type="it.cnr.helpdesk.UserManagement.ActionForms.UpdateUserForm">
+   <form-property name="e_mail" type="java.lang.String"/>
+   <form-property name="nome" type="java.lang.String"/>
+   <form-property name="mail_stop" type="java.lang.String"/>
+   <form-property name="strutturaDescrizione" type="java.lang.String"/>
+   <form-property name="telefono" type="java.lang.String"/>
+   <form-property name="struttura" type="java.lang.String"/>
+   <form-property name="login" type="java.lang.String"/>
+   <form-property name="cognome" type="java.lang.String"/>
+  </form-bean>
+  <form-bean name="UpdateUserInfoForm" type="it.cnr.helpdesk.UserManagement.ActionForms.UpdateUserInfoForm">
+   <form-property name="struttura" type="java.lang.String"/>
+   <form-property name="strutturaDescrizione" type="java.lang.String"/>
+   <form-property name="nome" type="java.lang.String"/>
+   <form-property name="cognome" type="java.lang.String"/>
+   <form-property name="e_mail" type="java.lang.String"/>
+   <form-property name="mail_stop" type="java.lang.String"/>
+   <form-property name="login" type="java.lang.String"/>
+   <form-property name="telefono" type="java.lang.String"/>
+  </form-bean>
+  <form-bean name="CreateCategoryForm" type="it.cnr.helpdesk.CategoryManagement.ActionForms.CreateCategoryForm">
+   <form-property name="descrizione" type="java.lang.String"/>
+   <form-property name="nome" type="java.lang.String"/>
+   <form-property name="categoriaPadre" type="java.lang.String"/>
+  </form-bean>
+  <form-bean name="UpdateCategoryForm" type="it.cnr.helpdesk.CategoryManagement.ActionForms.UpdateCategoryForm">
+   <form-property name="idCategoria" type="java.lang.String"/>
+   <form-property name="nome" type="java.lang.String"/>
+   <form-property name="descrizione" type="java.lang.String"/>
+  </form-bean>
+  <form-bean name="ChangePasswordForm" type="it.cnr.helpdesk.UserManagement.ActionForms.ChangePasswordForm">
+   <form-property name="newpwd" type="java.lang.String"/>
+   <form-property name="newpwd2" type="java.lang.String"/>
+   <form-property name="oldpwd" type="java.lang.String"/>
+  </form-bean>
+  <form-bean name="CambioCategoriaForm" type="it.cnr.helpdesk.ProblemManagement.ActionForms.CambioCategoriaForm">
+   <form-property name="nomeCategoria" type="java.lang.String"/>
+   <form-property name="idSegnalazione" type="java.lang.String"/>
+   <form-property name="idCategoria" type="java.lang.String"/>
+  </form-bean>
+  <form-bean name="CreaFaqForm" type="it.cnr.helpdesk.FaqManagement.ActionForms.CreaFaqForm">
+   <form-property name="titolo" type="java.lang.String"/>
+   <form-property name="categoria" type="java.lang.String"/>
+   <form-property name="descrizione" type="java.lang.String"/>
+  </form-bean>
+  <form-bean name="UpdateFaqDetailForm" type="it.cnr.helpdesk.FaqManagement.ActionForms.UpdateFaqDetailForm">
+   <form-property name="categoria" type="java.lang.String"/>
+   <form-property name="titolo" type="java.lang.String"/>
+   <form-property name="descrizione" type="java.lang.String"/>
+  </form-bean>
+  <form-bean name="CreaSegnalazioneForm" type="it.cnr.helpdesk.ProblemManagement.ActionForms.CreaSegnalazioneForm">
+   <form-property name="descrizioneCategoria" type="java.lang.String"/>
+   <form-property name="page" type="java.lang.String"/>
+   <form-property name="attachment2" type="org.apache.struts.upload.FormFile"/>
+   <form-property name="descrizione" type="java.lang.String"/>
+   <form-property name="attachment1" type="org.apache.struts.upload.FormFile"/>
+   <form-property name="titolo" type="java.lang.String"/>
+   <form-property name="attach" type="java.lang.String"/>
+   <form-property name="idCategoria" type="java.lang.String"/>
+   <form-property name="priorita" type="java.lang.String"/>
+   <form-property name="attachment3" type="org.apache.struts.upload.FormFile"/>
+  </form-bean>
+ </form-beans>
+ <global-exceptions/>
+ <global-forwards>
+  <forward name="welcome" path="/loginForm.jsp"/>
+  <forward name="OilErrorPage" path="/OilErrorPage.jsp" redirect="false"/>
+  <forward name="SelectInstance" path="/app/SelectInstance.do" redirect="false"/>
+  <forward name="NoToken" path="/NoToken.jsp"/>
+ </global-forwards>
+ <action-mappings>
+  <action attribute="Login" input="/loginForm.jsp" name="LoginForm"
+   path="/app/Login" type="it.cnr.helpdesk.UserManagement.actions.LoginAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.exceptions.SettingsJBException"/>
+   <exception key="exceptions.LoginFailure" path="/loginForm.jsp" type="it.cnr.helpdesk.UserManagement.exceptions.LoginFailureException"/>
+   <exception key="exceptions.MultipleProfile" path="/loginForm.jsp" type="it.cnr.helpdesk.UserManagement.exceptions.MultipleProfileException"/>
+   <forward name="Home" path="/app/Home.do" redirect="false"/>
+   <forward name="Login" path="/loginForm.jsp" redirect="false"/>
+   <forward name="userInfo" path="/app/GetUpdateUserInfo.do" redirect="false"/>
+   <forward name="SelectProfile" path="/app/SelectProfile.do" redirect="true"/>
+  </action>
+  <action path="/app/Logout" type="it.cnr.helpdesk.UserManagement.actions.LogoutAction">
+   <exception
+    key="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"
+    path="/OilErrorPage.jsp" type="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"/>
+   <forward name="Home" path="/app/Home.do" redirect="true"/>
+  </action>
+  <action path="/app/Home" type="it.cnr.helpdesk.UserManagement.actions.HomeAction">
+   <forward name="GeneralHome" path="/Home.jsp" redirect="false"/>
+   <forward name="LoginForm" path="/loginForm.jsp"/>
+   <forward name="SelectProfile" path="/app/SelectProfile.do"/>
+  </action>
+  <action path="/app/SelectInstance" scope="request" type="it.cnr.helpdesk.UserManagement.actions.SelectInstanceAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="Exception"/>
+   <forward name="Home" path="/app/Home.do" redirect="true"/>
+   <forward name="SelectInstance" path="/SelectInstance.jsp"/>
+  </action>
+  <action path="/app/Switch" type="it.cnr.helpdesk.UserManagement.actions.SwitchAction">
+   <forward name="Home" path="/app/Home.do" redirect="true"/>
+  </action>
+  <action path="/app/SelectProfile" scope="request" type="it.cnr.helpdesk.UserManagement.actions.SelectProfileAction">
+   <forward name="SelectProfile" path="/SelectProfile.jsp" redirect="false"/>
+   <forward name="Home" path="/app/Home.do" redirect="true"/>
+  </action>
+  <action forward="/CreateUser.jsp" path="/app/GetCreateUser"/>
+  <action attribute="CreateUser" input="/CreateUser.jsp"
+   name="CreateUserForm" path="/app/CreateUser" type="it.cnr.helpdesk.UserManagement.actions.CreateUserAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"/>
+   <exception key="exceptions.DuplicatedAccount" path="/CreateUser.jsp" type="it.cnr.helpdesk.UserManagement.exceptions.DuplicatedAccountException"/>
+   <forward name="CreateUser" path="/CreateUser.jsp" redirect="false"/>
+  </action>
+  <action path="/app/GetUpdateUser" type="it.cnr.helpdesk.UserManagement.actions.GetUpdateUserAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="java.io.UnsupportedEncodingException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.LdapManagemet.exceptions.LdapJBException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.exceptions.SettingsJBException"/>
+   <forward name="UpdateUser" path="/app/UpdateUser.do" redirect="false"/>
+  </action>
+  <action attribute="UpdateUser" input="/UpdateUser.jsp"
+   name="UpdateUserForm" path="/app/UpdateUser" type="it.cnr.helpdesk.UserManagement.actions.UpdateUserAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"/>
+   <forward name="UpdateUser" path="/UpdateUser.jsp" redirect="false"/>
+  </action>
+  <action path="/app/ManageUser" type="it.cnr.helpdesk.UserManagement.actions.ManageUserAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.exceptions.SettingsJBException"/>
+   <forward name="ManageUser" path="/ManageUser.jsp" redirect="false"/>
+   <forward name="ManageExpert" path="/ManageExpert.jsp" redirect="false"/>
+  </action>
+  <action path="/app/ManageExpert" type="it.cnr.helpdesk.UserManagement.actions.ManageExpertAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.exceptions.SettingsJBException"/>
+   <forward name="ManageUser" path="/ManageUser.jsp" redirect="false"/>
+   <forward name="ManageExpert" path="/ManageExpert.jsp" redirect="false"/>
+  </action>
+  <action path="/app/ManageValidator" type="it.cnr.helpdesk.UserManagement.actions.ManageValidatorAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.exceptions.SettingsJBException"/>
+   <forward name="ManageValidator" path="/ManageValidator.jsp" redirect="false"/>
+  </action>
+  <action path="/app/ManageExpert2" type="it.cnr.helpdesk.UserManagement.actions.ManageExpert2Action">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.CategoryManagement.exceptions.CategoryJBException"/>
+   <forward name="ManageExpert2" path="/ManageExpert2.jsp" redirect="false"/>
+  </action>
+  <action path="/app/SwitchUserStatus" type="it.cnr.helpdesk.UserManagement.actions.SwitchUserStatusAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"/>
+   <forward name="SwitchUserStatus" path="/SwitchUserStatus.jsp" redirect="false"/>
+  </action>
+  <action path="/app/DisabilitaEsperto" type="it.cnr.helpdesk.UserManagement.actions.DisabilitaEspertoAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.ProblemManagement.exceptions.ProblemJBException"/>
+   <forward name="DisabilitaEsperto" path="/DisabilitaEsperto.jsp" redirect="false"/>
+  </action>
+  <action path="/app/GetUpdateUserInfo" type="it.cnr.helpdesk.UserManagement.actions.GetUpdateUserInfoAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="java.io.UnsupportedEncodingException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"/>
+   <forward contextRelative="false" name="UpdateUserInfo"
+    path="/app/UpdateUserInfo.do" redirect="false"/>
+  </action>
+  <action attribute="UpdateUserInfo" input="/UpdateUserInfo.jsp"
+   name="UpdateUserInfoForm" path="/app/UpdateUserInfo" type="it.cnr.helpdesk.UserManagement.actions.UpdateUserInfoAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"/>
+   <forward name="UpdateUserInfo" path="/UpdateUserInfo.jsp" redirect="false"/>
+  </action>
+  <action forward="/CreateCategory.jsp" path="/app/GetCreateCategory"/>
+  <action attribute="CreateCategory" input="/CreateCategory.jsp"
+   name="CreateCategoryForm" path="/app/CreateCategory" type="it.cnr.helpdesk.CategoryManagement.actions.CreateCategoryAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.CategoryManagement.exceptions.CategoryJBException"/>
+   <exception key="exceptions.DuplicatedCategory"
+    path="/CreateCategory.jsp" type="it.cnr.helpdesk.CategoryManagement.exceptions.DuplicatedCategoryException"/>
+   <forward name="CreateCategory" path="/CreateCategory.jsp" redirect="false"/>
+   <forward name="Success" path="/CreateCategorySuccess.jsp" redirect="false"/>
+  </action>
+  <action path="/app/GetUpdateCategory" type="it.cnr.helpdesk.CategoryManagement.actions.GetUpdateCategoryAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.CategoryManagement.exceptions.CategoryJBException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="java.io.UnsupportedEncodingException"/>
+   <forward name="UpdateCategory" path="/app/UpdateCategory.do" redirect="false"/>
+  </action>
+  <action attribute="UpdateCategory" input="/UpdateCategory.jsp"
+   name="UpdateCategoryForm" path="/app/UpdateCategory"
+   type="it.cnr.helpdesk.CategoryManagement.actions.UpdateCategoryAction" validate="true">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.CategoryManagement.exceptions.CategoryJBException"/>
+   <forward name="UpdateCategory" path="/UpdateCategory.jsp" redirect="false"/>
+  </action>
+  <action path="/app/SwitchCategoria" type="it.cnr.helpdesk.CategoryManagement.actions.SwitchCategoriaAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.CategoryManagement.exceptions.CategoryJBException"/>
+   <forward name="SwitchCategoria" path="/SwitchCategoria.jsp" redirect="false"/>
+  </action>
+  <action path="/app/ManageCategory" type="it.cnr.helpdesk.CategoryManagement.actions.ManageCategoryAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.CategoryManagement.exceptions.CategoryJBException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.exceptions.SettingsJBException"/>
+   <forward name="ManageCategory" path="/ManageCategory.jsp" redirect="false"/>
+   <forward name="Home" path="/app/Home.do" redirect="false"/>
+  </action>
+  <action forward="/changePassword.jsp" path="/app/GetChangePassword"/>
+  <action attribute="changePassword" input="/changePassword.jsp"
+   name="ChangePasswordForm" path="/app/ChangePassword" type="it.cnr.helpdesk.UserManagement.actions.ChangePasswordAction">
+   <exception key="exceptions.WrongPassword" path="/changePassword.jsp" type="it.cnr.helpdesk.UserManagement.exceptions.WrongPasswordException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.exceptions.SettingsJBException"/>
+   <forward name="ChangePassword" path="/changePassword.jsp" redirect="false"/>
+  </action>
+  <action path="/app/StatisticheDistribuzionePerCategoria" type="it.cnr.helpdesk.StatisticsManagement.actions.StatisticheDistribuzionePerCategoriaAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.StatisticsManagement.exceptions.StatisticsJBException"/>
+   <forward name="StatisticheDistribuzionePerCategoria"
+    path="/StatisticheDistribuzionePerCategoria.jsp" redirect="false"/>
+  </action>
+  <action path="/app/StatisticheDistribuzionePerStato" type="it.cnr.helpdesk.StatisticsManagement.actions.StatisticheDistribuzionePerStatoAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.StatisticsManagement.exceptions.StatisticsJBException"/>
+   <forward name="StatisticheDistribuzionePerStato"
+    path="/StatisticheDistribuzionePerStato.jsp" redirect="false"/>
+  </action>
+  <action path="/app/StatisticheTempiRisposta" type="it.cnr.helpdesk.StatisticsManagement.actions.StatisticheTempiRispostaAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.StatisticsManagement.exceptions.StatisticsJBException"/>
+   <forward name="StatisticheTempiRisposta"
+    path="/StatisticheTempiRisposta.jsp" redirect="false"/>
+  </action>
+  <action path="/app/SegnalazioneView" type="it.cnr.helpdesk.ProblemManagement.actions.SegnalazioneViewAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.ProblemManagement.exceptions.ProblemJBException"/>
+   <forward name="SegnalazioneView" path="/SegnalazioneView.jsp" redirect="false"/>
+  </action>
+  <action path="/app/ProblemCountPerCategory" type="it.cnr.helpdesk.ProblemManagement.actions.ProblemCountPerCategoryAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.ProblemManagement.exceptions.ProblemJBException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"/>
+   <forward name="ProblemCountPerCategory"
+    path="/ProblemCountPerCategory.jsp" redirect="false"/>
+  </action>
+  <action path="/app/ProblemCountPerCategoryValidator" type="it.cnr.helpdesk.ProblemManagement.actions.ProblemCountPerCategoryValidatorAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.ProblemManagement.exceptions.ProblemJBException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"/>
+   <forward name="ProblemCountPerCategoryValidator"
+    path="/ProblemCountPerCategoryValidator.jsp" redirect="false"/>
+  </action>
+  <action path="/app/ExpertQueueDetail" type="it.cnr.helpdesk.ProblemManagement.actions.ExpertQueueDetailAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.ProblemManagement.exceptions.ProblemJBException"/>
+   <forward name="ExpertQueueDetail" path="/ExpertQueueDetail.jsp" redirect="false"/>
+   <forward name="ExpertQueueDetail-p" path="/ExpertQueueDetail-p.jsp" redirect="false"/>
+  </action>
+  <action path="/app/ValidatorQueueDetail" type="it.cnr.helpdesk.ProblemManagement.actions.ValidatorQueueDetailAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.ProblemManagement.exceptions.ProblemJBException"/>
+   <forward name="ValidatorQueueDetail" path="/ValidatorQueueDetail.jsp" redirect="false"/>
+   <forward name="ValidatorQueueDetail-p"
+    path="/ValidatorQueueDetail-p.jsp" redirect="false"/>
+  </action>
+  <action path="/app/SegnalazioneDetail" type="it.cnr.helpdesk.ProblemManagement.actions.SegnalazioneDetailAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.ProblemManagement.exceptions.ProblemJBException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.EventManagement.exceptions.EventJBException"/>
+   <forward name="SegnalazioneDetail" path="/SegnalazioneDetail.jsp" redirect="false"/>
+  </action>
+  <action path="/app/UserDetail" type="it.cnr.helpdesk.UserManagement.actions.UserDetailAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"/>
+   <forward name="UserDetail" path="/UserDetail.jsp" redirect="false"/>
+  </action>
+  <action attribute="CambioCategoria" input="/CambioCategoria.jsp"
+   name="CambioCategoriaForm" path="/app/CambioCategoria" type="it.cnr.helpdesk.ProblemManagement.actions.CambioCategoriaAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.ProblemManagement.exceptions.ProblemJBException"/>
+   <forward name="CambioCategoria" path="/CambioCategoria.jsp" redirect="false"/>
+  </action>
+  <action path="/app/CategoryTreeFrame1" type="it.cnr.helpdesk.CategoryManagement.actions.CategoryTreeFrame1Action">
+   <forward name="CategoryTreeFrame1" path="/CategoryTreeFrame1.jsp" redirect="false"/>
+  </action>
+  <action path="/app/CambioStato" type="it.cnr.helpdesk.ProblemManagement.actions.CambioStatoAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.ProblemManagement.exceptions.ProblemJBException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.exceptions.SettingsJBException"/>
+   <exception handler="it.cnr.helpdesk.util.ConditionExceptionHandler"
+    key="" path="/ChangeStateErrorPage.jsp" type="it.cnr.helpdesk.StateMachineManagement.exceptions.ConditionException"/>
+   <forward name="CambioStato" path="/CambioStato.jsp" redirect="false"/>
+  </action>
+  <action path="/app/FileAppend" type="it.cnr.helpdesk.ProblemManagement.actions.FileAppendAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="java.lang.Exception"/>
+   <forward name="FileAppend" path="/FileAppend.jsp" redirect="false"/>
+  </action>
+  <action path="/app/EventList" type="it.cnr.helpdesk.ProblemManagement.actions.EventListAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.ProblemManagement.exceptions.ProblemJBException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.EventManagement.exceptions.EventJBException"/>
+   <forward name="EventList" path="/EventList.jsp" redirect="false"/>
+  </action>
+  <action path="/app/NotaDetail" type="it.cnr.helpdesk.ProblemManagement.actions.NotaDetailAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.ProblemManagement.exceptions.ProblemJBException"/>
+   <forward name="NotaDetail" path="/NotaDetail.jsp" redirect="false"/>
+  </action>
+  <action path="/app/AggiuntaNota" type="it.cnr.helpdesk.ProblemManagement.actions.AggiuntaNotaAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.ProblemManagement.exceptions.ProblemJBException"/>
+   <forward name="AggiuntaNota" path="/AggiuntaNota.jsp" redirect="false"/>
+  </action>
+  <action forward="/AggiuntaNota.jsp" path="/app/GetAggiuntaNota"/>
+  <action path="/app/ExpertQBESettings" type="it.cnr.helpdesk.ProblemManagement.actions.ExpertQBESettingsAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.exceptions.SettingsJBException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.CategoryManagement.exceptions.CategoryJBException"/>
+   <forward name="ExpertQBESettings" path="/ExpertQBESettings.jsp" redirect="false"/>
+  </action>
+  <action path="/app/InfoUtenti" type="it.cnr.helpdesk.UserManagement.actions.InfoUtentiAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"/>
+   <forward name="InfoUtenti" path="/InfoUtenti.jsp" redirect="false"/>
+  </action>
+  <action path="/app/GetCreaFaq" type="it.cnr.helpdesk.FaqManagement.actions.GetCreaFaqAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.CategoryManagement.exceptions.CategoryJBException"/>
+   <forward name="CreaFaq" path="/CreaFaq.jsp" redirect="false"/>
+  </action>
+  <action attribute="CreaFaq" input="/CreaFaq.jsp" name="CreaFaqForm"
+   path="/app/CreaFaq"
+   type="it.cnr.helpdesk.FaqManagement.actions.CreaFaqAction" validate="true">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.FaqManagement.exceptions.FaqJBException"/>
+   <forward name="CreaFaq" path="/CreaFaq.jsp" redirect="false"/>
+  </action>
+  <action path="/app/UpdateFaq" type="it.cnr.helpdesk.FaqManagement.actions.UpdateFaqAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.FaqManagement.exceptions.FaqJBException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.CategoryManagement.exceptions.CategoryJBException"/>
+   <forward name="UpdateFaq" path="/UpdateFaq.jsp" redirect="false"/>
+  </action>
+  <action path="/app/FaqDetail" type="it.cnr.helpdesk.FaqManagement.actions.FaqDetailAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.FaqManagement.exceptions.FaqJBException"/>
+   <forward name="FaqDetail" path="/FaqDetail.jsp" redirect="false"/>
+  </action>
+  <action path="/app/GetUpdateFaqDetail" type="it.cnr.helpdesk.FaqManagement.actions.GetUpdateFaqDetailAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.FaqManagement.exceptions.FaqJBException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.CategoryManagement.exceptions.CategoryJBException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="java.io.UnsupportedEncodingException"/>
+   <forward name="UpdateFaqDetail" path="/app/UpdateFaqDetail.do" redirect="false"/>
+  </action>
+  <action attribute="UpdateFaqDetail" input="/UpdateFaqDetail.jsp"
+   name="UpdateFaqDetailForm" path="/app/UpdateFaqDetail" type="it.cnr.helpdesk.FaqManagement.actions.UpdateFaqDetailAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.FaqManagement.exceptions.FaqJBException"/>
+   <forward name="UpdateFaqDetail" path="/UpdateFaqDetail.jsp" redirect="false"/>
+  </action>
+  <action path="/app/DeleteFaqDetail" type="it.cnr.helpdesk.FaqManagement.actions.DeleteFaqDetailAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.FaqManagement.exceptions.FaqJBException"/>
+   <forward name="DeleteFaqDetail" path="/DeleteFaqDetail.jsp" redirect="false"/>
+  </action>
+  <action path="/app/UserQueueDetail" type="it.cnr.helpdesk.ProblemManagement.actions.UserQueueDetailAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.ProblemManagement.exceptions.ProblemJBException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.exceptions.SettingsJBException"/>
+   <forward name="UserQueueDetail" path="/UserQueueDetail.jsp" redirect="false"/>
+   <forward name="UserQueueDetail-p" path="/UserQueueDetail-p.jsp" redirect="false"/>
+  </action>
+  <action path="/app/GetCreaSegnalazione" type="it.cnr.helpdesk.ProblemManagement.actions.GetCreaSegnalazioneAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.exceptions.SettingsJBException"/>
+   <forward name="CreaSegnalazione" path="/CreaSegnalazione.jsp" redirect="false"/>
+  </action>
+  <action attribute="CreaSegnalazione" input="/CreaSegnalazione.jsp"
+   name="CreaSegnalazioneForm" path="/app/CreaSegnalazione"
+   scope="request" type="it.cnr.helpdesk.ProblemManagement.actions.CreaSegnalazioneAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.exceptions.SettingsJBException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.ProblemManagement.exceptions.ProblemJBException"/>
+   <forward name="CreaSegnalazione" path="/CreaSegnalazione.jsp" redirect="false"/>
+   <forward name="FileSelect" path="/FileSelect.jsp" redirect="false"/>
+  </action>
+  <action path="/app/FileSelect" type="it.cnr.helpdesk.ProblemManagement.actions.FileSelectAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="java.lang.Exception"/>
+   <forward name="FileSelect" path="/FileSelect.jsp" redirect="false"/>
+  </action>
+  <action path="/app/Faq" type="it.cnr.helpdesk.FaqManagement.actions.FaqAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.FaqManagement.exceptions.FaqJBException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.CategoryManagement.exceptions.CategoryJBException"/>
+   <forward name="Faq" path="/Faq.jsp" redirect="false"/>
+  </action>
+  <action path="/app/StruttureList" type="it.cnr.helpdesk.UOManagement.action.StruttureListAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"/>
+   <forward name="StruttureList" path="/StruttureList.jsp" redirect="false"/>
+  </action>
+  <action path="/app/ManageStrutture" type="it.cnr.helpdesk.UOManagement.action.ManageStruttureAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.UOManagement.exceptions.UOJBException"/>
+   <forward name="ManageStrutture" path="/ManageStrutture.jsp" redirect="false"/>
+  </action>
+  <action path="/app/CreateStrutture" type="it.cnr.helpdesk.UOManagement.action.CreateStruttureAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.UOManagement.exceptions.UOJBException"/>
+   <forward name="CreateStrutture" path="/CreateStrutture.jsp" redirect="false"/>
+  </action>
+  <action path="/app/SwitchStrutture" type="it.cnr.helpdesk.UOManagement.action.SwitchStruttureAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.UOManagement.exceptions.UOJBException"/>
+   <forward name="SwitchStrutture" path="/SwitchStrutture.jsp" redirect="false"/>
+  </action>
+  <action path="/app/UpdateStrutture" type="it.cnr.helpdesk.UOManagement.action.UpdateStruttureAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.UOManagement.exceptions.UOJBException"/>
+   <forward name="UpdateStrutture" path="/UpdateStrutture.jsp" redirect="false"/>
+  </action>
+  <action path="/app/CreateMessage" type="it.cnr.helpdesk.MessageManagement.actions.CreateMessageAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.MessageManagement.exceptions.MessageJBException"/>
+   <forward name="CreateMessage" path="/CreateMessage.jsp" redirect="false"/>
+  </action>
+  <action path="/app/ManageMessage" type="it.cnr.helpdesk.MessageManagement.actions.ManageMessageAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.MessageManagement.exceptions.MessageJBException"/>
+   <forward name="ManageMessage" path="/ManageMessage.jsp" redirect="false"/>
+  </action>
+  <action path="/app/SwitchMessage" type="it.cnr.helpdesk.MessageManagement.actions.SwitchMessageAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.MessageManagement.exceptions.MessageJBException"/>
+   <forward name="SwitchMessage" path="/SwitchMessage.jsp" redirect="false"/>
+  </action>
+  <action path="/app/UpdateMessage" type="it.cnr.helpdesk.MessageManagement.actions.UpdateMessageAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.MessageManagement.exceptions.MessageJBException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="java.lang.NumberFormatException"/>
+   <forward name="UpdateMessage" path="/UpdateMessage.jsp" redirect="false"/>
+  </action>
+  <action path="/app/RepositoryQBE" type="it.cnr.helpdesk.RepositoryManagement.actions.RepositoryQBEAction">
+   <forward name="RepositoryQBE" path="/RepositoryQBE.jsp" redirect="false"/>
+   <forward name="Home" path="/app/Home.do" redirect="false"/>
+  </action>
+  <action path="/app/RepositoryUpdate2" type="it.cnr.helpdesk.RepositoryManagement.actions.RepositoryUpdate2Action">
+   <forward name="RepositoryUpdate2" path="/RepositoryUpdate2.jsp" redirect="false"/>
+   <forward name="RepositoryQBE" path="/RepositoryQBE.jsp" redirect="false"/>
+  </action>
+  <action path="/app/UploadFile" type="it.cnr.helpdesk.RepositoryManagement.actions.UploadFileAction">
+   <forward name="UploadFile" path="/UploadFile.jsp" redirect="false"/>
+  </action>
+  <action path="/app/DeleteFile" type="it.cnr.helpdesk.RepositoryManagement.actions.DeleteFileAction">
+   <forward name="DeleteFile" path="/DeleteFile.jsp" redirect="false"/>
+  </action>
+  <action path="/app/UserMapping" type="it.cnr.helpdesk.UserManagement.actions.UserMappingAction">
+   <forward name="UserMapping" path="/UserMapping.jsp" redirect="false"/>
+  </action>
+  <action path="/app/TeamProblemCountPerCategory" type="it.cnr.helpdesk.ProblemManagement.actions.TeamProblemCountPerCategoryAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.ProblemManagement.exceptions.ProblemJBException"/>
+   <forward name="TeamProblemCountPerCategory"
+    path="/TeamProblemCountPerCategory.jsp" redirect="false"/>
+  </action>
+  <action path="/app/TeamQueueDetail" type="it.cnr.helpdesk.ProblemManagement.actions.TeamQueueDetailAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.ProblemManagement.exceptions.ProblemJBException"/>
+   <forward name="TeamQueueDetail" path="/TeamQueueDetail.jsp" redirect="false"/>
+   <forward name="TeamQueueDetail-p" path="/TeamQueueDetail-p.jsp" redirect="false"/>
+  </action>
+  <action path="/MailConfirm" type="it.cnr.helpdesk.MailParserManagement.actions.MailConfirmAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="java.lang.Exception"/>
+   <forward name="MailConfirm" path="/MailConfirm.jsp" redirect="false"/>
+  </action>
+  <action path="/app/Setup" type="it.cnr.helpdesk.ApplicationSettingsManagement.actions.SetupAction">
+   <forward name="Setup" path="/Setup.jsp" redirect="false"/>
+  </action>
+  <action path="/TicketVerify" type="it.cnr.helpdesk.MailParserManagement.actions.TicketVerifyAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="java.lang.Exception"/>
+   <forward name="TicketVerify" path="/TicketVerify.jsp" redirect="false"/>
+  </action>
+  <action path="/app/SearchUser" type="it.cnr.helpdesk.UserManagement.actions.SearchUserAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"/>
+   <forward name="SearchUser" path="/SearchUser.jsp" redirect="false"/>
+  </action>
+  <action path="/app/GetCreaSegnalazioneEsperto" type="it.cnr.helpdesk.ProblemManagement.actions.GetCreaSegnalazioneEspertoAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.exceptions.SettingsJBException"/>
+   <forward name="CreaSegnalazioneEsperto"
+    path="/CreaSegnalazioneEsperto.jsp" redirect="false"/>
+  </action>
+  <action attribute="CreaSegnalazioneEsperto"
+   input="/CreaSegnalazioneEsperto.jsp" name="CreaSegnalazioneForm"
+   path="/app/CreaSegnalazioneEsperto" scope="request" type="it.cnr.helpdesk.ProblemManagement.actions.CreaSegnalazioneEspertoAction">
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.exceptions.SettingsJBException"/>
+   <exception key="exceptions.InternalError" path="/OilErrorPage.jsp" type="it.cnr.helpdesk.ProblemManagement.exceptions.ProblemJBException"/>
+   <forward name="CreaSegnalazioneEsperto"
+    path="/CreaSegnalazioneEsperto.jsp" redirect="false"/>
+  </action>
+  <action forward="/Contatti.jsp" path="/app/Contatti"/>
+  <action forward="/OilErrorPage.jsp" path="/app/OilErrorPage"/>
+  <action forward="/CategoryTree.jsp" path="/app/CategoryTree"/>
+  <action forward="/CategoryTreeFrame2.jsp" path="/app/CategoryTreeFrame2"/>
+  <action forward="/RepositoryUpdate1.jsp" path="/app/RepositoryUpdate1"/>
+  <action forward="/RepositoryUpdate3.jsp" path="/app/RepositoryUpdate3"/>
+  <action forward="/RepositoryUpdate4.jsp" path="/app/RepositoryUpdate4"/>
+  <action forward="/SegnalazioneDetail-p.jsp" path="/app/SegnalazioneDetail-p"/>
+  <action forward="/Notoken.jsp" path="/app/NoToken"/>
+  <action forward="/AccessDenied.jsp" path="/app/AccessDenied"/>
+  <action forward="/About.jsp" path="/app/About"/>
+  <action forward="/RepositoryUpdate.jsp" path="/app/RepositoryUpdate"/>
+  <action forward="/Contatti.jsp" path="/pub/Contatti"/>
+  <action path="/app/DeleteAttachment" type="it.cnr.helpdesk.AttachmentManagement.actions.DeleteAttachmentAction">
+   <forward name="DeleteAttachment" path="/DeleteAttachment.jsp" redirect="false"/>
+  </action>
+ </action-mappings>
+ <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+ <message-resources key="HDMail" parameter="it.cnr.helpdesk.resources.applicationHDM"/>
+ <message-resources key="HDTrasparenza" parameter="it.cnr.helpdesk.resources.applicationHDT"/>
+ <message-resources key="HDLRA" parameter="it.cnr.helpdesk.resources.applicationHDL"/>
+ <message-resources key="HDEsterno" parameter="it.cnr.helpdesk.resources.applicationHDE"/>
+ <message-resources key="HDRSI" parameter="it.cnr.helpdesk.resources.applicationDTM"/>
+ <message-resources key="HDISSN" parameter="it.cnr.helpdesk.resources.applicationHDN"/>
+ <message-resources key="HDFSE" parameter="it.cnr.helpdesk.resources.applicationHDF"/>
+ <message-resources key="HDInterno" parameter="it.cnr.helpdesk.resources.applicationHDI"/>
+ <message-resources key="HDCert" parameter="it.cnr.helpdesk.resources.applicationHDR"/>
+ <message-resources key="HDConcorsi" parameter="it.cnr.helpdesk.resources.applicationHDC"/>
+ <message-resources key="HDADP" parameter="it.cnr.helpdesk.resources.applicationHDA"/>
+ <message-resources key="HDProt" parameter="it.cnr.helpdesk.resources.applicationHDP"/>
+ <message-resources key="HDPeople" parameter="it.cnr.helpdesk.resources.applicationHDO"/>
+ <message-resources key="HDSiper" parameter="it.cnr.helpdesk.resources.applicationHDS"/>
+ <message-resources key="HDBice" parameter="it.cnr.helpdesk.resources.applicationHDB"/>
+ <message-resources key="HDDL" parameter="it.cnr.helpdesk.resources.applicationHDD"/>
+ <message-resources key="HDMissioni" parameter="it.cnr.helpdesk.resources.applicationHMS"/>
+ <message-resources parameter="it.cnr.helpdesk.resources.application"/>
+ <message-resources key="HDesk" parameter="it.cnr.helpdesk.resources.applicationHDK"/>
+ <plug-in className="org.apache.struts.tiles.TilesPlugin">
+  <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml"/>
+  <set-property property="moduleAware" value="true"/>
+ </plug-in>
+ <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+  <set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+ </plug-in>
+</struts-config>

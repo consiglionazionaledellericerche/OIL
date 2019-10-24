@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE jboss-web
+    PUBLIC "-//JBoss//DTD Web Application 2.3//EN"
+    "http://www.jboss.org/j2ee/dtds/jboss-web_3_0.dtd">
+
+<jboss-web>   
+   
+<ejb-ref>
+  <ejb-ref-name>comp/env/ejb/ProblemManagement</ejb-ref-name> 
+  <jndi-name>comp/env/ejb/ProblemManagement</jndi-name> 
+</ejb-ref>
+
+<ejb-ref>
+  <ejb-ref-name>comp/env/ejb/CategoryManagement</ejb-ref-name> 
+  <jndi-name>comp/env/ejb/CategoryManagement</jndi-name> 
+</ejb-ref>
+
+<ejb-ref>
+  <ejb-ref-name>comp/env/ejb/UserManagement</ejb-ref-name> 
+  <jndi-name>comp/env/ejb/UserManagement</jndi-name> 
+</ejb-ref>
+
+<ejb-ref>
+  <ejb-ref-name>comp/env/ejb/FaqManagement</ejb-ref-name> 
+  <jndi-name>comp/env/ejb/FaqManagement</jndi-name> 
+</ejb-ref>
+
+<ejb-ref>
+  <ejb-ref-name>comp/env/ejb/StatisticsManagement</ejb-ref-name> 
+  <jndi-name>comp/env/ejb/StatisticsManagement</jndi-name> 
+</ejb-ref>
+
+<ejb-ref>
+  <ejb-ref-name>comp/env/ejb/MessageManagement</ejb-ref-name> 
+  <jndi-name>comp/env/ejb/MessageManagement</jndi-name> 
+</ejb-ref>
+
+<ejb-ref>
+  <ejb-ref-name>comp/env/ejb/StateMachineManagement</ejb-ref-name> 
+  <jndi-name>comp/env/ejb/StateMachineManagement</jndi-name> 
+</ejb-ref>
+
+<ejb-ref>
+  <ejb-ref-name>comp/env/ejb/EventManagement</ejb-ref-name> 
+  <jndi-name>comp/env/ejb/EventManagement</jndi-name> 
+</ejb-ref>
+
+<ejb-ref>
+  <ejb-ref-name>comp/env/ejb/RepositoryManagement</ejb-ref-name> 
+  <jndi-name>comp/env/ejb/RepositoryManagement</jndi-name> 
+</ejb-ref>
+
+<ejb-ref>
+  <ejb-ref-name>comp/env/ejb/MailParserManagement</ejb-ref-name> 
+  <jndi-name>comp/env/ejb/MailParserManagement</jndi-name> 
+</ejb-ref>
+
+<ejb-ref>
+  <ejb-ref-name>comp/env/ejb/UOManagement</ejb-ref-name> 
+  <jndi-name>comp/env/ejb/UOManagement</jndi-name> 
+</ejb-ref>
+</jboss-web>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE jboss PUBLIC "-//JBoss//DTD JBOSS 3.0//EN" "http://www.jboss.org/j2ee/dtd/jboss_3_0.dtd">
+
+<jboss>
+
+   <unauthenticated-principal>nobody</unauthenticated-principal>
+
+   <enterprise-beans>
+
+     <!--
+       To add beans that you have deployment descriptor info for, add
+       a file to your XDoclet merge directory called jboss-beans.xml that contains
+       the <session></session>, <entity></entity> and <message-driven></message-driven>
+       markup for those beans.
+     -->
+
+      <session>
+         <ejb-name>CategoryManagement</ejb-name>
+         <jndi-name>comp/env/ejb/CategoryManagement</jndi-name>
+         <local-jndi-name>CategoryManagementLocal</local-jndi-name>
+
+      </session>
+      <session>
+         <ejb-name>StatisticsManagement</ejb-name>
+         <jndi-name>comp/env/ejb/StatisticsManagement</jndi-name>
+         <local-jndi-name>StatisticsManagementLocal</local-jndi-name>
+
+      </session>
+      <session>
+         <ejb-name>FaqManagement</ejb-name>
+         <jndi-name>comp/env/ejb/FaqManagement</jndi-name>
+         <local-jndi-name>FaqManagementLocal</local-jndi-name>
+
+      </session>
+      <session>
+         <ejb-name>EventManagement</ejb-name>
+         <jndi-name>comp/env/ejb/EventManagement</jndi-name>
+         <local-jndi-name>EventManagementLocal</local-jndi-name>
+
+      </session>
+      <session>
+         <ejb-name>RepositoryManagement</ejb-name>
+         <jndi-name>comp/env/ejb/RepositoryManagement</jndi-name>
+         <local-jndi-name>RepositoryManagementLocal</local-jndi-name>
+
+      </session>
+      <session>
+         <ejb-name>StateMachineManagement</ejb-name>
+         <jndi-name>comp/env/ejb/StateMachineManagement</jndi-name>
+         <local-jndi-name>StateMachineManagementLocal</local-jndi-name>
+
+      </session>
+      <session>
+         <ejb-name>MailParserManagement</ejb-name>
+         <jndi-name>comp/env/ejb/MailParserManagement</jndi-name>
+         <local-jndi-name>MailParserManagementLocal</local-jndi-name>
+
+      </session>
+      <session>
+         <ejb-name>AttachmentEJB</ejb-name>
+         <jndi-name>AttachmentEJB</jndi-name>
+         <local-jndi-name>AttachmentEJBLocal</local-jndi-name>
+
+      </session>
+      <session>
+         <ejb-name>MessageManagement</ejb-name>
+         <jndi-name>comp/env/ejb/MessageManagement</jndi-name>
+         <local-jndi-name>MessageManagementLocal</local-jndi-name>
+
+      </session>
+      <session>
+         <ejb-name>UOManagement</ejb-name>
+         <jndi-name>comp/env/ejb/UOManagement</jndi-name>
+         <local-jndi-name>UOManagementLocal</local-jndi-name>
+
+      </session>
+      <session>
+         <ejb-name>ProblemManagement</ejb-name>
+         <jndi-name>comp/env/ejb/ProblemManagement</jndi-name>
+         <local-jndi-name>ProblemManagementLocal</local-jndi-name>
+
+      </session>
+      <session>
+         <ejb-name>UserManagement</ejb-name>
+         <jndi-name>comp/env/ejb/UserManagement</jndi-name>
+         <local-jndi-name>UserManagementLocal</local-jndi-name>
+
+      </session>
+
+      <message-driven>
+         <ejb-name>MailManagementBean</ejb-name>
+         <destination-jndi-name>java:/jms/queue/mailnotificationservice</destination-jndi-name>
+      </message-driven>
+
+   </enterprise-beans>
+
+   <resource-managers>
+   </resource-managers>
+
+</jboss>

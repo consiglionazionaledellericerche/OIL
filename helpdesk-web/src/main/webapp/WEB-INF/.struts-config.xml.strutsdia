@@ -1,0 +1,1332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="StrutsProcess">
+ <PROCESS-ITEM ID="NoToken" NAME="forward0" PATH="/NoToken.jsp"
+  SHAPE="32,17,0,0" TARGET="page0" TITLE="NoToken" TYPE="forward" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="OilErrorPage" NAME="forward1"
+  PATH="/OilErrorPage.jsp" SHAPE="576,129,0,0" TARGET="page1"
+  TITLE="OilErrorPage" TYPE="forward" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="welcome" NAME="forward2" PATH="/loginForm.jsp"
+  SHAPE="576,1537,0,0" TARGET="page2" TITLE="welcome" TYPE="forward" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="SelectInstance" NAME="forward3"
+  PATH="/app/SelectInstance.do" SHAPE="32,2609,0,0" TARGET="action62"
+  TITLE="SelectInstance" TYPE="forward" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#TicketVerify" NAME="action0" PATH="/TicketVerify"
+  SHAPE="32,129,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="TicketVerify" NAME="forward0"
+   PATH="/TicketVerify.jsp" TARGET="page3" TITLE="TicketVerify"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="java.lang.Exception" NAME="exception0"
+   PATH="/OilErrorPage.jsp" TARGET="page1" TITLE="Exception"
+   TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#FileAppend" NAME="action1"
+  PATH="/app/FileAppend" SHAPE="32,369,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="FileAppend" NAME="forward0"
+   PATH="/FileAppend.jsp" TARGET="page4" TITLE="FileAppend"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="java.lang.Exception" NAME="exception0"
+   PATH="/OilErrorPage.jsp" TARGET="page1" TITLE="Exception"
+   TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#EventList" NAME="action2" PATH="/app/EventList"
+  SHAPE="32,513,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.EventManagement.exceptions.EventJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="EventJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.ProblemManagement.exceptions.ProblemJBException"
+   NAME="exception1" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="ProblemJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="EventList" NAME="forward0"
+   PATH="/EventList.jsp" TARGET="page5" TITLE="EventList" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#StatisticheTempiRisposta" NAME="action3"
+  PATH="/app/StatisticheTempiRisposta" SHAPE="32,689,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="StatisticheTempiRisposta" NAME="forward0"
+   PATH="/StatisticheTempiRisposta.jsp" TARGET="page6"
+   TITLE="StatisticheTempiRisposta" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UserJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.StatisticsManagement.exceptions.StatisticsJBException"
+   NAME="exception1" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="StatisticsJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#CreateMessage" NAME="action4"
+  PATH="/app/CreateMessage" SHAPE="32,865,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.MessageManagement.exceptions.MessageJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="MessageJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="CreateMessage" NAME="forward0"
+   PATH="/CreateMessage.jsp" TARGET="page7" TITLE="CreateMessage"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#SwitchUserStatus" NAME="action5"
+  PATH="/app/SwitchUserStatus" SHAPE="32,1009,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="SwitchUserStatus" NAME="forward0"
+   PATH="/SwitchUserStatus.jsp" TARGET="page8" TITLE="SwitchUserStatus"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UserJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#ExpertQueueDetail" NAME="action6"
+  PATH="/app/ExpertQueueDetail" SHAPE="32,1217,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="ExpertQueueDetail" NAME="forward0"
+   PATH="/ExpertQueueDetail.jsp" TARGET="page9"
+   TITLE="ExpertQueueDetail" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.ProblemManagement.exceptions.ProblemJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="ProblemJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="ExpertQueueDetail-p" NAME="forward1"
+   PATH="/ExpertQueueDetail-p.jsp" TARGET="page10"
+   TITLE="ExpertQueueDetail-p" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#UpdateUserInfo" NAME="action7"
+  PATH="/app/UpdateUserInfo" SHAPE="576,369,0,0"
+  TITLE="UpdateUserInfoForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="UpdateUserInfo" NAME="forward0"
+   PATH="/UpdateUserInfo.jsp" TARGET="page11" TITLE="UpdateUserInfo"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UserJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#ManageMessage" NAME="action8"
+  PATH="/app/ManageMessage" SHAPE="32,1393,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="ManageMessage" NAME="forward0"
+   PATH="/ManageMessage.jsp" TARGET="page12" TITLE="ManageMessage"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.MessageManagement.exceptions.MessageJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="MessageJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#Home" NAME="action9" PATH="/app/Home"
+  SHAPE="576,1873,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="GeneralHome" NAME="forward0" PATH="/Home.jsp"
+   TARGET="page13" TITLE="GeneralHome" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="LoginForm" NAME="forward1"
+   PATH="/loginForm.jsp" TARGET="page2" TITLE="LoginForm" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="SelectProfile" NAME="forward2"
+   PATH="/app/SelectProfile.do" TARGET="action82" TITLE="SelectProfile"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#ExpertQBESettings" NAME="action10"
+  PATH="/app/ExpertQBESettings" SHAPE="32,2401,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.exceptions.SettingsJBException" NAME="exception0"
+   PATH="/OilErrorPage.jsp" TARGET="page1" TITLE="SettingsJBException"
+   TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"
+   NAME="exception1" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UserJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.CategoryManagement.exceptions.CategoryJBException"
+   NAME="exception2" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="CategoryJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="ExpertQBESettings" NAME="forward0"
+   PATH="/ExpertQBESettings.jsp" TARGET="page14"
+   TITLE="ExpertQBESettings" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#CreateCategory" NAME="action11"
+  PATH="/app/CreateCategory" SHAPE="32,2785,0,0"
+  TITLE="CreateCategoryForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.CategoryManagement.exceptions.DuplicatedCategoryException"
+   NAME="exception0" PATH="/CreateCategory.jsp" TARGET="page15"
+   TITLE="DuplicatedCategoryException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.CategoryManagement.exceptions.CategoryJBException"
+   NAME="exception1" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="CategoryJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="CreateCategory" NAME="forward0"
+   PATH="/CreateCategory.jsp" TARGET="page15" TITLE="CreateCategory"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="Success" NAME="forward1"
+   PATH="/CreateCategorySuccess.jsp" TARGET="page16" TITLE="Success"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#DeleteAttachment" NAME="action12"
+  PATH="/app/DeleteAttachment" SHAPE="32,4385,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="DeleteAttachment" NAME="forward0"
+   PATH="/DeleteAttachment.jsp" TARGET="page17" TITLE="DeleteAttachment"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#GetUpdateUser" NAME="action13"
+  PATH="/app/GetUpdateUser" SHAPE="32,2993,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.LdapManagemet.exceptions.LdapJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="LdapJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.exceptions.SettingsJBException" NAME="exception1"
+   PATH="/OilErrorPage.jsp" TARGET="page1" TITLE="SettingsJBException"
+   TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"
+   NAME="exception2" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UserJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="java.io.UnsupportedEncodingException"
+   NAME="exception3" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UnsupportedEncodingException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="UpdateUser" NAME="forward0"
+   PATH="/app/UpdateUser.do" TARGET="action23" TITLE="UpdateUser"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#SegnalazioneView" NAME="action14"
+  PATH="/app/SegnalazioneView" SHAPE="32,3233,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.ProblemManagement.exceptions.ProblemJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="ProblemJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="SegnalazioneView" NAME="forward0"
+   PATH="/SegnalazioneView.jsp" TARGET="page18" TITLE="SegnalazioneView"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"
+   NAME="exception1" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UserJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#CambioStato" NAME="action15"
+  PATH="/app/CambioStato" SHAPE="32,3521,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.ProblemManagement.exceptions.ProblemJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="ProblemJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.StateMachineManagement.exceptions.ConditionException"
+   NAME="exception1" PATH="/ChangeStateErrorPage.jsp" TARGET="page19"
+   TITLE="ConditionException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.exceptions.SettingsJBException" NAME="exception2"
+   PATH="/OilErrorPage.jsp" TARGET="page1" TITLE="SettingsJBException"
+   TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"
+   NAME="exception3" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UserJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="CambioStato" NAME="forward0"
+   PATH="/CambioStato.jsp" TARGET="page20" TITLE="CambioStato"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#ManageValidator" NAME="action16"
+  PATH="/app/ManageValidator" SHAPE="32,3761,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="ManageValidator" NAME="forward0"
+   PATH="/ManageValidator.jsp" TARGET="page21" TITLE="ManageValidator"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.exceptions.SettingsJBException" NAME="exception0"
+   PATH="/OilErrorPage.jsp" TARGET="page1" TITLE="SettingsJBException"
+   TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"
+   NAME="exception1" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UserJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#ProblemCountPerCategoryValidator"
+  NAME="action17" PATH="/app/ProblemCountPerCategoryValidator"
+  SHAPE="32,129,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.ProblemManagement.exceptions.ProblemJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="ProblemJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="ProblemCountPerCategoryValidator"
+   NAME="forward0" PATH="/ProblemCountPerCategoryValidator.jsp"
+   TARGET="page22" TITLE="ProblemCountPerCategoryValidator"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"
+   NAME="exception1" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UserJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#MailConfirm" NAME="action18" PATH="/MailConfirm"
+  SHAPE="32,129,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="java.lang.Exception" NAME="exception0"
+   PATH="/OilErrorPage.jsp" TARGET="page1" TITLE="Exception"
+   TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="MailConfirm" NAME="forward0"
+   PATH="/MailConfirm.jsp" TARGET="page23" TITLE="MailConfirm"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#ValidatorQueueDetail" NAME="action19"
+  PATH="/app/ValidatorQueueDetail" SHAPE="32,129,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.ProblemManagement.exceptions.ProblemJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="ProblemJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="ValidatorQueueDetail" NAME="forward0"
+   PATH="/ValidatorQueueDetail.jsp" TARGET="page24"
+   TITLE="ValidatorQueueDetail" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="ValidatorQueueDetail-p" NAME="forward1"
+   PATH="/ValidatorQueueDetail-p.jsp" TARGET="page25"
+   TITLE="ValidatorQueueDetail-p" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#GetCreateUser" NAME="action20"
+  PATH="/app/GetCreateUser" SHAPE="32,129,0,0" SUBTYPE="forward"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action20" PATH="/CreateUser.jsp"
+   TARGET="page26" TITLE="forward" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#Login" NAME="action21" PATH="/app/Login"
+  SHAPE="32,1537,0,0" TITLE="LoginForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="Login" NAME="forward0" PATH="/loginForm.jsp"
+   TARGET="page2" TITLE="Login" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="Home" NAME="forward1" PATH="/app/Home.do"
+   TARGET="action9" TITLE="Home" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UserManagement.exceptions.MultipleProfileException"
+   NAME="exception0" PATH="/loginForm.jsp" TARGET="page2"
+   TITLE="MultipleProfileException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.exceptions.SettingsJBException" NAME="exception1"
+   PATH="/OilErrorPage.jsp" TARGET="page1" TITLE="SettingsJBException"
+   TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"
+   NAME="exception2" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UserJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="userInfo" NAME="forward2"
+   PATH="/app/GetUpdateUserInfo.do" TARGET="action84" TITLE="userInfo"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UserManagement.exceptions.LoginFailureException"
+   NAME="exception3" PATH="/loginForm.jsp" TARGET="page2"
+   TITLE="LoginFailureException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="SelectProfile" NAME="forward3"
+   PATH="/app/SelectProfile.do" TARGET="action82" TITLE="SelectProfile"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#Setup" NAME="action22" PATH="/app/Setup"
+  SHAPE="32,4497,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="Setup" NAME="forward0" PATH="/Setup.jsp"
+   TARGET="page27" TITLE="Setup" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#UpdateUser" NAME="action23"
+  PATH="/app/UpdateUser" SHAPE="304,3777,0,0" TITLE="UpdateUserForm"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UserJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="UpdateUser" NAME="forward0"
+   PATH="/UpdateUser.jsp" TARGET="page28" TITLE="UpdateUser"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#UpdateCategory" NAME="action24"
+  PATH="/app/UpdateCategory" SHAPE="304,145,0,0"
+  TITLE="UpdateCategoryForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.CategoryManagement.exceptions.CategoryJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="CategoryJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="UpdateCategory" NAME="forward0"
+   PATH="/UpdateCategory.jsp" TARGET="page29" TITLE="UpdateCategory"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#Switch" NAME="action25" PATH="/app/Switch"
+  SHAPE="304,1889,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="Home" NAME="forward0" PATH="/app/Home.do"
+   TARGET="action9" TITLE="Home" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#GetCreaSegnalazioneEsperto" NAME="action26"
+  PATH="/app/GetCreaSegnalazioneEsperto" SHAPE="32,129,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="CreaSegnalazioneEsperto" NAME="forward0"
+   PATH="/CreaSegnalazioneEsperto.jsp" TARGET="page30"
+   TITLE="CreaSegnalazioneEsperto" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.exceptions.SettingsJBException" NAME="exception0"
+   PATH="/OilErrorPage.jsp" TARGET="page1" TITLE="SettingsJBException"
+   TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#SegnalazioneDetail-p" NAME="action27"
+  PATH="/app/SegnalazioneDetail-p" SHAPE="32,4609,0,0" SUBTYPE="forward"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action27" PATH="/SegnalazioneDetail-p.jsp"
+   TARGET="page31" TITLE="forward" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#StatisticheDistribuzionePerStato"
+  NAME="action28" PATH="/app/StatisticheDistribuzionePerStato"
+  SHAPE="32,129,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="StatisticheDistribuzionePerStato"
+   NAME="forward0" PATH="/StatisticheDistribuzionePerStato.jsp"
+   TARGET="page32" TITLE="StatisticheDistribuzionePerStato"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UserJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.StatisticsManagement.exceptions.StatisticsJBException"
+   NAME="exception1" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="StatisticsJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#SwitchStrutture" NAME="action29"
+  PATH="/app/SwitchStrutture" SHAPE="32,129,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="SwitchStrutture" NAME="forward0"
+   PATH="/SwitchStrutture.jsp" TARGET="page33" TITLE="SwitchStrutture"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UOManagement.exceptions.UOJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UOJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#UpdateFaqDetail" NAME="action30"
+  PATH="/app/UpdateFaqDetail" SHAPE="304,145,0,0"
+  TITLE="UpdateFaqDetailForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.FaqManagement.exceptions.FaqJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="FaqJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="UpdateFaqDetail" NAME="forward0"
+   PATH="/UpdateFaqDetail.jsp" TARGET="page34" TITLE="UpdateFaqDetail"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#UploadFile" NAME="action31"
+  PATH="/app/UploadFile" SHAPE="32,4721,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="UploadFile" NAME="forward0"
+   PATH="/UploadFile.jsp" TARGET="page35" TITLE="UploadFile"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#GetCreaSegnalazione" NAME="action32"
+  PATH="/app/GetCreaSegnalazione" SHAPE="32,129,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="CreaSegnalazione" NAME="forward0"
+   PATH="/CreaSegnalazione.jsp" TARGET="page36" TITLE="CreaSegnalazione"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.exceptions.SettingsJBException" NAME="exception0"
+   PATH="/OilErrorPage.jsp" TARGET="page1" TITLE="SettingsJBException"
+   TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#CreaFaq" NAME="action33" PATH="/app/CreaFaq"
+  SHAPE="32,129,0,0" TITLE="CreaFaqForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.FaqManagement.exceptions.FaqJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="FaqJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="CreaFaq" NAME="forward0" PATH="/CreaFaq.jsp"
+   TARGET="page37" TITLE="CreaFaq" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#ManageStrutture" NAME="action34"
+  PATH="/app/ManageStrutture" SHAPE="32,129,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="ManageStrutture" NAME="forward0"
+   PATH="/ManageStrutture.jsp" TARGET="page38" TITLE="ManageStrutture"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UOManagement.exceptions.UOJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UOJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#FileSelect" NAME="action35"
+  PATH="/app/FileSelect" SHAPE="576,1217,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="java.lang.Exception" NAME="exception0"
+   PATH="/OilErrorPage.jsp" TARGET="page1" TITLE="Exception"
+   TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="FileSelect" NAME="forward0"
+   PATH="/FileSelect.jsp" TARGET="page39" TITLE="FileSelect"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#CambioCategoria" NAME="action36"
+  PATH="/app/CambioCategoria" SHAPE="32,129,0,0"
+  TITLE="CambioCategoriaForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.ProblemManagement.exceptions.ProblemJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="ProblemJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"
+   NAME="exception1" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UserJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="CambioCategoria" NAME="forward0"
+   PATH="/CambioCategoria.jsp" TARGET="page40" TITLE="CambioCategoria"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#pub#Contatti" NAME="action37" PATH="/pub/Contatti"
+  SHAPE="32,4833,0,0" SUBTYPE="forward" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action37" PATH="/Contatti.jsp"
+   TARGET="page41" TITLE="forward" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#AggiuntaNota" NAME="action38"
+  PATH="/app/AggiuntaNota" SHAPE="32,129,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.ProblemManagement.exceptions.ProblemJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="ProblemJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="AggiuntaNota" NAME="forward0"
+   PATH="/AggiuntaNota.jsp" TARGET="page42" TITLE="AggiuntaNota"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#FaqDetail" NAME="action39" PATH="/app/FaqDetail"
+  SHAPE="32,129,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.FaqManagement.exceptions.FaqJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="FaqJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="FaqDetail" NAME="forward0"
+   PATH="/FaqDetail.jsp" TARGET="page43" TITLE="FaqDetail"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#ManageExpert2" NAME="action40"
+  PATH="/app/ManageExpert2" SHAPE="32,129,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UserJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="ManageExpert2" NAME="forward0"
+   PATH="/ManageExpert2.jsp" TARGET="page44" TITLE="ManageExpert2"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.CategoryManagement.exceptions.CategoryJBException"
+   NAME="exception1" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="CategoryJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#SwitchMessage" NAME="action41"
+  PATH="/app/SwitchMessage" SHAPE="32,129,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.MessageManagement.exceptions.MessageJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="MessageJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="SwitchMessage" NAME="forward0"
+   PATH="/SwitchMessage.jsp" TARGET="page45" TITLE="SwitchMessage"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#InfoUtenti" NAME="action42"
+  PATH="/app/InfoUtenti" SHAPE="32,129,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="InfoUtenti" NAME="forward0"
+   PATH="/InfoUtenti.jsp" TARGET="page46" TITLE="InfoUtenti"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UserJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#DeleteFile" NAME="action43"
+  PATH="/app/DeleteFile" SHAPE="32,5057,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="DeleteFile" NAME="forward0"
+   PATH="/DeleteFile.jsp" TARGET="page47" TITLE="DeleteFile"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#Faq" NAME="action44" PATH="/app/Faq"
+  SHAPE="32,129,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.FaqManagement.exceptions.FaqJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="FaqJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.CategoryManagement.exceptions.CategoryJBException"
+   NAME="exception1" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="CategoryJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="Faq" NAME="forward0" PATH="/Faq.jsp"
+   TARGET="page48" TITLE="Faq" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#GetUpdateFaqDetail" NAME="action45"
+  PATH="/app/GetUpdateFaqDetail" SHAPE="32,129,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.FaqManagement.exceptions.FaqJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="FaqJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.CategoryManagement.exceptions.CategoryJBException"
+   NAME="exception1" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="CategoryJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="java.io.UnsupportedEncodingException"
+   NAME="exception2" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UnsupportedEncodingException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="UpdateFaqDetail" NAME="forward0"
+   PATH="/app/UpdateFaqDetail.do" TARGET="action30"
+   TITLE="UpdateFaqDetail" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#TeamProblemCountPerCategory" NAME="action46"
+  PATH="/app/TeamProblemCountPerCategory" SHAPE="32,129,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.ProblemManagement.exceptions.ProblemJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="ProblemJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="TeamProblemCountPerCategory" NAME="forward0"
+   PATH="/TeamProblemCountPerCategory.jsp" TARGET="page49"
+   TITLE="TeamProblemCountPerCategory" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#CreaSegnalazioneEsperto" NAME="action47"
+  PATH="/app/CreaSegnalazioneEsperto" SHAPE="576,689,0,0"
+  TITLE="CreaSegnalazioneForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="CreaSegnalazioneEsperto" NAME="forward0"
+   PATH="/CreaSegnalazioneEsperto.jsp" TARGET="page30"
+   TITLE="CreaSegnalazioneEsperto" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.ProblemManagement.exceptions.ProblemJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="ProblemJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.exceptions.SettingsJBException" NAME="exception1"
+   PATH="/OilErrorPage.jsp" TARGET="page1" TITLE="SettingsJBException"
+   TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#UserMapping" NAME="action48"
+  PATH="/app/UserMapping" SHAPE="32,5169,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="UserMapping" NAME="forward0"
+   PATH="/UserMapping.jsp" TARGET="page50" TITLE="UserMapping"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#UpdateStrutture" NAME="action49"
+  PATH="/app/UpdateStrutture" SHAPE="32,129,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="UpdateStrutture" NAME="forward0"
+   PATH="/UpdateStrutture.jsp" TARGET="page51" TITLE="UpdateStrutture"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UOManagement.exceptions.UOJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UOJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#UpdateFaq" NAME="action50" PATH="/app/UpdateFaq"
+  SHAPE="32,129,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="UpdateFaq" NAME="forward0"
+   PATH="/UpdateFaq.jsp" TARGET="page52" TITLE="UpdateFaq"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.FaqManagement.exceptions.FaqJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="FaqJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.CategoryManagement.exceptions.CategoryJBException"
+   NAME="exception1" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="CategoryJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#SegnalazioneDetail" NAME="action51"
+  PATH="/app/SegnalazioneDetail" SHAPE="32,129,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.EventManagement.exceptions.EventJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="EventJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.ProblemManagement.exceptions.ProblemJBException"
+   NAME="exception1" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="ProblemJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="SegnalazioneDetail" NAME="forward0"
+   PATH="/SegnalazioneDetail.jsp" TARGET="page53"
+   TITLE="SegnalazioneDetail" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#ManageExpert" NAME="action52"
+  PATH="/app/ManageExpert" SHAPE="32,129,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="ManageExpert" NAME="forward0"
+   PATH="/ManageExpert.jsp" TARGET="page54" TITLE="ManageExpert"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="ManageUser" NAME="forward1"
+   PATH="/ManageUser.jsp" TARGET="page55" TITLE="ManageUser"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.exceptions.SettingsJBException" NAME="exception0"
+   PATH="/OilErrorPage.jsp" TARGET="page1" TITLE="SettingsJBException"
+   TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"
+   NAME="exception1" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UserJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#CategoryTreeFrame2" NAME="action53"
+  PATH="/app/CategoryTreeFrame2" SHAPE="32,5281,0,0" SUBTYPE="forward"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action53" PATH="/CategoryTreeFrame2.jsp"
+   TARGET="page56" TITLE="forward" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#CreaSegnalazione" NAME="action54"
+  PATH="/app/CreaSegnalazione" SHAPE="576,1009,0,0"
+  TITLE="CreaSegnalazioneForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="CreaSegnalazione" NAME="forward0"
+   PATH="/CreaSegnalazione.jsp" TARGET="page36" TITLE="CreaSegnalazione"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.ProblemManagement.exceptions.ProblemJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="ProblemJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.exceptions.SettingsJBException" NAME="exception1"
+   PATH="/OilErrorPage.jsp" TARGET="page1" TITLE="SettingsJBException"
+   TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="FileSelect" NAME="forward1"
+   PATH="/FileSelect.jsp" TARGET="page39" TITLE="FileSelect"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#GetCreaFaq" NAME="action55"
+  PATH="/app/GetCreaFaq" SHAPE="32,129,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UserJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.CategoryManagement.exceptions.CategoryJBException"
+   NAME="exception1" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="CategoryJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="CreaFaq" NAME="forward0" PATH="/CreaFaq.jsp"
+   TARGET="page37" TITLE="CreaFaq" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#TeamQueueDetail" NAME="action56"
+  PATH="/app/TeamQueueDetail" SHAPE="32,129,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.ProblemManagement.exceptions.ProblemJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="ProblemJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="TeamQueueDetail-p" NAME="forward0"
+   PATH="/TeamQueueDetail-p.jsp" TARGET="page57"
+   TITLE="TeamQueueDetail-p" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="TeamQueueDetail" NAME="forward1"
+   PATH="/TeamQueueDetail.jsp" TARGET="page58" TITLE="TeamQueueDetail"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#CategoryTreeFrame1" NAME="action57"
+  PATH="/app/CategoryTreeFrame1" SHAPE="32,5393,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="CategoryTreeFrame1" NAME="forward0"
+   PATH="/CategoryTreeFrame1.jsp" TARGET="page59"
+   TITLE="CategoryTreeFrame1" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#CreateUser" NAME="action58"
+  PATH="/app/CreateUser" SHAPE="32,129,0,0" TITLE="CreateUserForm"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="CreateUser" NAME="forward0"
+   PATH="/CreateUser.jsp" TARGET="page26" TITLE="CreateUser"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UserManagement.exceptions.DuplicatedAccountException"
+   NAME="exception0" PATH="/CreateUser.jsp" TARGET="page26"
+   TITLE="DuplicatedAccountException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"
+   NAME="exception1" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UserJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#StatisticheDistribuzionePerCategoria"
+  NAME="action59" PATH="/app/StatisticheDistribuzionePerCategoria"
+  SHAPE="32,129,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="StatisticheDistribuzionePerCategoria"
+   NAME="forward0" PATH="/StatisticheDistribuzionePerCategoria.jsp"
+   TARGET="page60" TITLE="StatisticheDistribuzionePerCategoria"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UserJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.StatisticsManagement.exceptions.StatisticsJBException"
+   NAME="exception1" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="StatisticsJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#RepositoryQBE" NAME="action60"
+  PATH="/app/RepositoryQBE" SHAPE="32,1873,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="Home" NAME="forward0" PATH="/app/Home.do"
+   TARGET="action9" TITLE="Home" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="RepositoryQBE" NAME="forward1"
+   PATH="/RepositoryQBE.jsp" TARGET="page61" TITLE="RepositoryQBE"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#ManageCategory" NAME="action61"
+  PATH="/app/ManageCategory" SHAPE="32,2193,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="Home" NAME="forward0" PATH="/app/Home.do"
+   TARGET="action9" TITLE="Home" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.exceptions.SettingsJBException" NAME="exception0"
+   PATH="/OilErrorPage.jsp" TARGET="page1" TITLE="SettingsJBException"
+   TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.CategoryManagement.exceptions.CategoryJBException"
+   NAME="exception1" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="CategoryJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="ManageCategory" NAME="forward1"
+   PATH="/ManageCategory.jsp" TARGET="page62" TITLE="ManageCategory"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#SelectInstance" NAME="action62"
+  PATH="/app/SelectInstance" SHAPE="304,2625,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="Exception" NAME="exception0"
+   PATH="/OilErrorPage.jsp" TARGET="page1" TITLE="Exception"
+   TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="Home" NAME="forward0" PATH="/app/Home.do"
+   TARGET="action9" TITLE="Home" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="SelectInstance" NAME="forward1"
+   PATH="/SelectInstance.jsp" TARGET="page63" TITLE="SelectInstance"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#GetUpdateCategory" NAME="action63"
+  PATH="/app/GetUpdateCategory" SHAPE="32,129,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.CategoryManagement.exceptions.CategoryJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="CategoryJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="UpdateCategory" NAME="forward0"
+   PATH="/app/UpdateCategory.do" TARGET="action24"
+   TITLE="UpdateCategory" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="java.io.UnsupportedEncodingException"
+   NAME="exception1" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UnsupportedEncodingException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#RepositoryUpdate1" NAME="action64"
+  PATH="/app/RepositoryUpdate1" SHAPE="32,5505,0,0" SUBTYPE="forward"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action64" PATH="/RepositoryUpdate1.jsp"
+   TARGET="page64" TITLE="forward" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#RepositoryUpdate2" NAME="action65"
+  PATH="/app/RepositoryUpdate2" SHAPE="32,2049,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="RepositoryUpdate2" NAME="forward0"
+   PATH="/RepositoryUpdate2.jsp" TARGET="page65"
+   TITLE="RepositoryUpdate2" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="RepositoryQBE" NAME="forward1"
+   PATH="/RepositoryQBE.jsp" TARGET="page61" TITLE="RepositoryQBE"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#RepositoryUpdate3" NAME="action66"
+  PATH="/app/RepositoryUpdate3" SHAPE="32,5617,0,0" SUBTYPE="forward"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action66" PATH="/RepositoryUpdate3.jsp"
+   TARGET="page66" TITLE="forward" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#RepositoryUpdate4" NAME="action67"
+  PATH="/app/RepositoryUpdate4" SHAPE="32,5729,0,0" SUBTYPE="forward"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action67" PATH="/RepositoryUpdate4.jsp"
+   TARGET="page67" TITLE="forward" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#Contatti" NAME="action68" PATH="/app/Contatti"
+  SHAPE="32,4945,0,0" SUBTYPE="forward" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action68" PATH="/Contatti.jsp"
+   TARGET="page41" TITLE="forward" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#StruttureList" NAME="action69"
+  PATH="/app/StruttureList" SHAPE="32,129,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UserJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="StruttureList" NAME="forward0"
+   PATH="/StruttureList.jsp" TARGET="page68" TITLE="StruttureList"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#CategoryTree" NAME="action70"
+  PATH="/app/CategoryTree" SHAPE="32,5841,0,0" SUBTYPE="forward"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action70" PATH="/CategoryTree.jsp"
+   TARGET="page69" TITLE="forward" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#ChangePassword" NAME="action71"
+  PATH="/app/ChangePassword" SHAPE="32,129,0,0"
+  TITLE="ChangePasswordForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="ChangePassword" NAME="forward0"
+   PATH="/changePassword.jsp" TARGET="page70" TITLE="ChangePassword"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UserManagement.exceptions.WrongPasswordException"
+   NAME="exception0" PATH="/changePassword.jsp" TARGET="page70"
+   TITLE="WrongPasswordException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.exceptions.SettingsJBException" NAME="exception1"
+   PATH="/OilErrorPage.jsp" TARGET="page1" TITLE="SettingsJBException"
+   TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"
+   NAME="exception2" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UserJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#UpdateMessage" NAME="action72"
+  PATH="/app/UpdateMessage" SHAPE="32,129,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="UpdateMessage" NAME="forward0"
+   PATH="/UpdateMessage.jsp" TARGET="page71" TITLE="UpdateMessage"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.MessageManagement.exceptions.MessageJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="MessageJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="java.lang.NumberFormatException"
+   NAME="exception1" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="NumberFormatException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#GetCreateCategory" NAME="action73"
+  PATH="/app/GetCreateCategory" SHAPE="32,3409,0,0" SUBTYPE="forward"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action73" PATH="/CreateCategory.jsp"
+   TARGET="page15" TITLE="forward" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#GetAggiuntaNota" NAME="action74"
+  PATH="/app/GetAggiuntaNota" SHAPE="32,129,0,0" SUBTYPE="forward"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action74" PATH="/AggiuntaNota.jsp"
+   TARGET="page42" TITLE="forward" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#SearchUser" NAME="action75"
+  PATH="/app/SearchUser" SHAPE="32,129,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UserJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="SearchUser" NAME="forward0"
+   PATH="/SearchUser.jsp" TARGET="page72" TITLE="SearchUser"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#UserQueueDetail" NAME="action76"
+  PATH="/app/UserQueueDetail" SHAPE="32,129,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.ProblemManagement.exceptions.ProblemJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="ProblemJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="UserQueueDetail-p" NAME="forward0"
+   PATH="/UserQueueDetail-p.jsp" TARGET="page73"
+   TITLE="UserQueueDetail-p" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="UserQueueDetail" NAME="forward1"
+   PATH="/UserQueueDetail.jsp" TARGET="page74" TITLE="UserQueueDetail"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.exceptions.SettingsJBException" NAME="exception1"
+   PATH="/OilErrorPage.jsp" TARGET="page1" TITLE="SettingsJBException"
+   TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"
+   NAME="exception2" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UserJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#ProblemCountPerCategory" NAME="action77"
+  PATH="/app/ProblemCountPerCategory" SHAPE="32,129,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.ProblemManagement.exceptions.ProblemJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="ProblemJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"
+   NAME="exception1" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UserJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="ProblemCountPerCategory" NAME="forward0"
+   PATH="/ProblemCountPerCategory.jsp" TARGET="page75"
+   TITLE="ProblemCountPerCategory" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#SwitchCategoria" NAME="action78"
+  PATH="/app/SwitchCategoria" SHAPE="32,129,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="SwitchCategoria" NAME="forward0"
+   PATH="/SwitchCategoria.jsp" TARGET="page76" TITLE="SwitchCategoria"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.CategoryManagement.exceptions.CategoryJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="CategoryJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#UserDetail" NAME="action79"
+  PATH="/app/UserDetail" SHAPE="32,129,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="UserDetail" NAME="forward0"
+   PATH="/UserDetail.jsp" TARGET="page77" TITLE="UserDetail"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UserJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#GetChangePassword" NAME="action80"
+  PATH="/app/GetChangePassword" SHAPE="32,129,0,0" SUBTYPE="forward"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action80" PATH="/changePassword.jsp"
+   TARGET="page70" TITLE="forward" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#OilErrorPage" NAME="action81"
+  PATH="/app/OilErrorPage" SHAPE="576,1393,0,0" SUBTYPE="forward"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action81" PATH="/OilErrorPage.jsp"
+   TARGET="page1" TITLE="forward" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#SelectProfile" NAME="action82"
+  PATH="/app/SelectProfile" SHAPE="848,1889,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="Home" NAME="forward0" PATH="/app/Home.do"
+   TARGET="action9" TITLE="Home" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="SelectProfile" NAME="forward1"
+   PATH="/SelectProfile.jsp" TARGET="page78" TITLE="SelectProfile"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#About" NAME="action83" PATH="/app/About"
+  SHAPE="32,5953,0,0" SUBTYPE="forward" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action83" PATH="/About.jsp" TARGET="page79"
+   TITLE="forward" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#GetUpdateUserInfo" NAME="action84"
+  PATH="/app/GetUpdateUserInfo" SHAPE="304,1553,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="UpdateUserInfo" NAME="forward0"
+   PATH="/app/UpdateUserInfo.do" TARGET="action7" TITLE="UpdateUserInfo"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UserJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="java.io.UnsupportedEncodingException"
+   NAME="exception1" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UnsupportedEncodingException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#ManageUser" NAME="action85"
+  PATH="/app/ManageUser" SHAPE="32,129,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="ManageExpert" NAME="forward0"
+   PATH="/ManageExpert.jsp" TARGET="page54" TITLE="ManageExpert"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="ManageUser" NAME="forward1"
+   PATH="/ManageUser.jsp" TARGET="page55" TITLE="ManageUser"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.exceptions.SettingsJBException" NAME="exception0"
+   PATH="/OilErrorPage.jsp" TARGET="page1" TITLE="SettingsJBException"
+   TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"
+   NAME="exception1" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UserJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#NotaDetail" NAME="action86"
+  PATH="/app/NotaDetail" SHAPE="32,129,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.ProblemManagement.exceptions.ProblemJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="ProblemJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="NotaDetail" NAME="forward0"
+   PATH="/NotaDetail.jsp" TARGET="page80" TITLE="NotaDetail"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#DisabilitaEsperto" NAME="action87"
+  PATH="/app/DisabilitaEsperto" SHAPE="32,129,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.ProblemManagement.exceptions.ProblemJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="ProblemJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"
+   NAME="exception1" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UserJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="DisabilitaEsperto" NAME="forward0"
+   PATH="/DisabilitaEsperto.jsp" TARGET="page81"
+   TITLE="DisabilitaEsperto" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#RepositoryUpdate" NAME="action88"
+  PATH="/app/RepositoryUpdate" SHAPE="32,6065,0,0" SUBTYPE="forward"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action88" PATH="/RepositoryUpdate.jsp"
+   TARGET="page82" TITLE="forward" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#CreateStrutture" NAME="action89"
+  PATH="/app/CreateStrutture" SHAPE="32,129,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="CreateStrutture" NAME="forward0"
+   PATH="/CreateStrutture.jsp" TARGET="page83" TITLE="CreateStrutture"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UOManagement.exceptions.UOJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UOJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#NoToken" NAME="action90" PATH="/app/NoToken"
+  SHAPE="32,6177,0,0" SUBTYPE="forward" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action90" PATH="/Notoken.jsp"
+   TARGET="page84" TITLE="forward" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#Logout" NAME="action91" PATH="/app/Logout"
+  SHAPE="304,2801,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="Home" NAME="forward0" PATH="/app/Home.do"
+   TARGET="action9" TITLE="Home" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.UserManagement.exceptions.UserJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="UserJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#AccessDenied" NAME="action92"
+  PATH="/app/AccessDenied" SHAPE="32,6289,0,0" SUBTYPE="forward"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action92" PATH="/AccessDenied.jsp"
+   TARGET="page85" TITLE="forward" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#app#DeleteFaqDetail" NAME="action93"
+  PATH="/app/DeleteFaqDetail" SHAPE="32,129,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="DeleteFaqDetail" NAME="forward0"
+   PATH="/DeleteFaqDetail.jsp" TARGET="page86" TITLE="DeleteFaqDetail"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT
+   ID="it.cnr.helpdesk.FaqManagement.exceptions.FaqJBException"
+   NAME="exception0" PATH="/OilErrorPage.jsp" TARGET="page1"
+   TITLE="FaqJBException" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page0" PATH="/NoToken.jsp" SHAPE="240,34,0,0"
+  SUBTYPE="jsp" TITLE="NoToken.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page1" PATH="/OilErrorPage.jsp" SHAPE="848,146,0,0"
+  SUBTYPE="jsp" TITLE="OilErrorPage.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page2" PATH="/loginForm.jsp" SHAPE="848,1554,0,0"
+  SUBTYPE="jsp" TITLE="loginForm.jsp" TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0" PATH="/app/Login.do"
+   SUBTYPE="confirmed" TARGET="action21" TITLE="/app/Login.do"
+   TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page3" PATH="/TicketVerify.jsp" SHAPE="304,146,0,0"
+  SUBTYPE="jsp" TITLE="TicketVerify.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page4" PATH="/FileAppend.jsp" SHAPE="304,386,0,0"
+  SUBTYPE="jsp" TITLE="FileAppend.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page5" PATH="/EventList.jsp" SHAPE="304,530,0,0"
+  SUBTYPE="jsp" TITLE="EventList.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page6" PATH="/StatisticheTempiRisposta.jsp"
+  SHAPE="304,706,0,0" SUBTYPE="jsp" TITLE="StatisticheTempiRisposta.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page7" PATH="/CreateMessage.jsp"
+  SHAPE="304,882,0,0" SUBTYPE="jsp" TITLE="CreateMessage.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page8" PATH="/SwitchUserStatus.jsp"
+  SHAPE="304,1026,0,0" SUBTYPE="jsp" TITLE="SwitchUserStatus.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page9" PATH="/ExpertQueueDetail.jsp"
+  SHAPE="304,1234,0,0" SUBTYPE="jsp" TITLE="ExpertQueueDetail.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page10" PATH="/ExpertQueueDetail-p.jsp"
+  SHAPE="304,1410,0,0" SUBTYPE="jsp" TITLE="ExpertQueueDetail-p.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page11" PATH="/UpdateUserInfo.jsp"
+  SHAPE="848,386,0,0" SUBTYPE="jsp" TITLE="UpdateUserInfo.jsp"
+  TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0" PATH="/app/UpdateUserInfo.do"
+   SUBTYPE="confirmed" TARGET="action7" TITLE="/app/UpdateUserInfo.do"
+   TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page12" PATH="/ManageMessage.jsp"
+  SHAPE="304,3010,0,0" SUBTYPE="jsp" TITLE="ManageMessage.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page13" PATH="/Home.jsp" SHAPE="848,2066,0,0"
+  SUBTYPE="jsp" TITLE="Home.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page14" PATH="/ExpertQBESettings.jsp"
+  SHAPE="304,3250,0,0" SUBTYPE="jsp" TITLE="ExpertQBESettings.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page15" PATH="/CreateCategory.jsp"
+  SHAPE="304,3426,0,0" SUBTYPE="jsp" TITLE="CreateCategory.jsp"
+  TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0" PATH="/app/CreateCategory.do"
+   SUBTYPE="confirmed" TARGET="action11" TITLE="/app/CreateCategory.do"
+   TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page16" PATH="/CreateCategorySuccess.jsp"
+  SHAPE="304,3538,0,0" SUBTYPE="jsp" TITLE="CreateCategorySuccess.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page17" PATH="/DeleteAttachment.jsp"
+  SHAPE="240,4402,0,0" SUBTYPE="jsp" TITLE="DeleteAttachment.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page18" PATH="/SegnalazioneView.jsp"
+  SHAPE="304,3954,0,0" SUBTYPE="jsp" TITLE="SegnalazioneView.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page19" PATH="/ChangeStateErrorPage.jsp"
+  SHAPE="304,4066,0,0" SUBTYPE="jsp" TITLE="ChangeStateErrorPage.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page20" PATH="/CambioStato.jsp"
+  SHAPE="304,4178,0,0" SUBTYPE="jsp" TITLE="CambioStato.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page21" PATH="/ManageValidator.jsp"
+  SHAPE="304,4290,0,0" SUBTYPE="jsp" TITLE="ManageValidator.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page22"
+  PATH="/ProblemCountPerCategoryValidator.jsp" SHAPE="304,146,0,0"
+  SUBTYPE="jsp" TITLE="ProblemCountPerCategoryValidator.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page23" PATH="/MailConfirm.jsp" SHAPE="304,146,0,0"
+  SUBTYPE="jsp" TITLE="MailConfirm.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page24" PATH="/ValidatorQueueDetail.jsp"
+  SHAPE="304,146,0,0" SUBTYPE="jsp" TITLE="ValidatorQueueDetail.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page25" PATH="/ValidatorQueueDetail-p.jsp"
+  SHAPE="304,146,0,0" SUBTYPE="jsp" TITLE="ValidatorQueueDetail-p.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page26" PATH="/CreateUser.jsp" SHAPE="304,146,0,0"
+  SUBTYPE="jsp" TITLE="CreateUser.jsp" TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0" PATH="/app/CreateUser.do"
+   SUBTYPE="confirmed" TARGET="action58" TITLE="/app/CreateUser.do"
+   TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page27" PATH="/Setup.jsp" SHAPE="240,4514,0,0"
+  SUBTYPE="jsp" TITLE="Setup.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page28" PATH="/UpdateUser.jsp" SHAPE="576,3762,0,0"
+  SUBTYPE="jsp" TITLE="UpdateUser.jsp" TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0" PATH="/app/UpdateUser.do"
+   SUBTYPE="confirmed" TARGET="action23" TITLE="/app/UpdateUser.do"
+   TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page29" PATH="/UpdateCategory.jsp"
+  SHAPE="576,514,0,0" SUBTYPE="jsp" TITLE="UpdateCategory.jsp"
+  TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0" PATH="/app/UpdateCategory.do"
+   SUBTYPE="confirmed" TARGET="action24" TITLE="/app/UpdateCategory.do"
+   TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page30" PATH="/CreaSegnalazioneEsperto.jsp"
+  SHAPE="304,146,0,0" SUBTYPE="jsp" TITLE="CreaSegnalazioneEsperto.jsp"
+  TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0"
+   PATH="/app/CreaSegnalazioneEsperto.do" SUBTYPE="confirmed"
+   TARGET="action47" TITLE="/app/CreaSegnalazioneEsperto.do" TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page31" PATH="/SegnalazioneDetail-p.jsp"
+  SHAPE="240,4626,0,0" SUBTYPE="jsp" TITLE="SegnalazioneDetail-p.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page32"
+  PATH="/StatisticheDistribuzionePerStato.jsp" SHAPE="304,146,0,0"
+  SUBTYPE="jsp" TITLE="StatisticheDistribuzionePerStato.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page33" PATH="/SwitchStrutture.jsp"
+  SHAPE="304,146,0,0" SUBTYPE="jsp" TITLE="SwitchStrutture.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page34" PATH="/UpdateFaqDetail.jsp"
+  SHAPE="576,866,0,0" SUBTYPE="jsp" TITLE="UpdateFaqDetail.jsp"
+  TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0" PATH="/app/UpdateFaqDetail.do"
+   SUBTYPE="confirmed" TARGET="action30" TITLE="/app/UpdateFaqDetail.do"
+   TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page35" PATH="/UploadFile.jsp" SHAPE="240,4738,0,0"
+  SUBTYPE="jsp" TITLE="UploadFile.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page36" PATH="/CreaSegnalazione.jsp"
+  SHAPE="304,146,0,0" SUBTYPE="jsp" TITLE="CreaSegnalazione.jsp"
+  TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0" PATH="/app/CreaSegnalazione.do"
+   SUBTYPE="confirmed" TARGET="action54"
+   TITLE="/app/CreaSegnalazione.do" TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page37" PATH="/CreaFaq.jsp" SHAPE="304,146,0,0"
+  SUBTYPE="jsp" TITLE="CreaFaq.jsp" TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0" PATH="/app/CreaFaq.do"
+   SUBTYPE="confirmed" TARGET="action33" TITLE="/app/CreaFaq.do"
+   TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page38" PATH="/ManageStrutture.jsp"
+  SHAPE="304,146,0,0" SUBTYPE="jsp" TITLE="ManageStrutture.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page39" PATH="/FileSelect.jsp" SHAPE="848,1026,0,0"
+  SUBTYPE="jsp" TITLE="FileSelect.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page40" PATH="/CambioCategoria.jsp"
+  SHAPE="304,146,0,0" SUBTYPE="jsp" TITLE="CambioCategoria.jsp"
+  TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0" PATH="/app/CambioCategoria.do"
+   SUBTYPE="confirmed" TARGET="action36" TITLE="/app/CambioCategoria.do"
+   TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page41" PATH="/Contatti.jsp" SHAPE="256,4850,0,0"
+  SUBTYPE="jsp" TITLE="Contatti.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page42" PATH="/AggiuntaNota.jsp"
+  SHAPE="304,146,0,0" SUBTYPE="jsp" TITLE="AggiuntaNota.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page43" PATH="/FaqDetail.jsp" SHAPE="304,146,0,0"
+  SUBTYPE="jsp" TITLE="FaqDetail.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page44" PATH="/ManageExpert2.jsp"
+  SHAPE="304,146,0,0" SUBTYPE="jsp" TITLE="ManageExpert2.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page45" PATH="/SwitchMessage.jsp"
+  SHAPE="304,146,0,0" SUBTYPE="jsp" TITLE="SwitchMessage.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page46" PATH="/InfoUtenti.jsp" SHAPE="304,146,0,0"
+  SUBTYPE="jsp" TITLE="InfoUtenti.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page47" PATH="/DeleteFile.jsp" SHAPE="240,5074,0,0"
+  SUBTYPE="jsp" TITLE="DeleteFile.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page48" PATH="/Faq.jsp" SHAPE="304,146,0,0"
+  SUBTYPE="jsp" TITLE="Faq.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page49" PATH="/TeamProblemCountPerCategory.jsp"
+  SHAPE="304,146,0,0" SUBTYPE="jsp"
+  TITLE="TeamProblemCountPerCategory.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page50" PATH="/UserMapping.jsp"
+  SHAPE="240,5186,0,0" SUBTYPE="jsp" TITLE="UserMapping.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page51" PATH="/UpdateStrutture.jsp"
+  SHAPE="304,146,0,0" SUBTYPE="jsp" TITLE="UpdateStrutture.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page52" PATH="/UpdateFaq.jsp" SHAPE="304,146,0,0"
+  SUBTYPE="jsp" TITLE="UpdateFaq.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page53" PATH="/SegnalazioneDetail.jsp"
+  SHAPE="304,146,0,0" SUBTYPE="jsp" TITLE="SegnalazioneDetail.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page54" PATH="/ManageExpert.jsp"
+  SHAPE="304,146,0,0" SUBTYPE="jsp" TITLE="ManageExpert.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page55" PATH="/ManageUser.jsp" SHAPE="304,146,0,0"
+  SUBTYPE="jsp" TITLE="ManageUser.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page56" PATH="/CategoryTreeFrame2.jsp"
+  SHAPE="240,5298,0,0" SUBTYPE="jsp" TITLE="CategoryTreeFrame2.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page57" PATH="/TeamQueueDetail-p.jsp"
+  SHAPE="304,146,0,0" SUBTYPE="jsp" TITLE="TeamQueueDetail-p.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page58" PATH="/TeamQueueDetail.jsp"
+  SHAPE="304,146,0,0" SUBTYPE="jsp" TITLE="TeamQueueDetail.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page59" PATH="/CategoryTreeFrame1.jsp"
+  SHAPE="240,5410,0,0" SUBTYPE="jsp" TITLE="CategoryTreeFrame1.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page60"
+  PATH="/StatisticheDistribuzionePerCategoria.jsp" SHAPE="304,146,0,0"
+  SUBTYPE="jsp" TITLE="StatisticheDistribuzionePerCategoria.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page61" PATH="/RepositoryQBE.jsp"
+  SHAPE="304,2066,0,0" SUBTYPE="jsp" TITLE="RepositoryQBE.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page62" PATH="/ManageCategory.jsp"
+  SHAPE="304,2418,0,0" SUBTYPE="jsp" TITLE="ManageCategory.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page63" PATH="/SelectInstance.jsp"
+  SHAPE="576,2610,0,0" SUBTYPE="jsp" TITLE="SelectInstance.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page64" PATH="/RepositoryUpdate1.jsp"
+  SHAPE="240,5522,0,0" SUBTYPE="jsp" TITLE="RepositoryUpdate1.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page65" PATH="/RepositoryUpdate2.jsp"
+  SHAPE="304,2210,0,0" SUBTYPE="jsp" TITLE="RepositoryUpdate2.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page66" PATH="/RepositoryUpdate3.jsp"
+  SHAPE="240,5634,0,0" SUBTYPE="jsp" TITLE="RepositoryUpdate3.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page67" PATH="/RepositoryUpdate4.jsp"
+  SHAPE="240,5746,0,0" SUBTYPE="jsp" TITLE="RepositoryUpdate4.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page68" PATH="/StruttureList.jsp"
+  SHAPE="304,146,0,0" SUBTYPE="jsp" TITLE="StruttureList.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page69" PATH="/CategoryTree.jsp"
+  SHAPE="240,5858,0,0" SUBTYPE="jsp" TITLE="CategoryTree.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page70" PATH="/changePassword.jsp"
+  SHAPE="304,146,0,0" SUBTYPE="jsp" TITLE="changePassword.jsp"
+  TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0" PATH="/app/ChangePassword.do"
+   SUBTYPE="confirmed" TARGET="action71" TITLE="/app/ChangePassword.do"
+   TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page71" PATH="/UpdateMessage.jsp"
+  SHAPE="304,146,0,0" SUBTYPE="jsp" TITLE="UpdateMessage.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page72" PATH="/SearchUser.jsp" SHAPE="304,146,0,0"
+  SUBTYPE="jsp" TITLE="SearchUser.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page73" PATH="/UserQueueDetail-p.jsp"
+  SHAPE="304,146,0,0" SUBTYPE="jsp" TITLE="UserQueueDetail-p.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page74" PATH="/UserQueueDetail.jsp"
+  SHAPE="304,146,0,0" SUBTYPE="jsp" TITLE="UserQueueDetail.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page75" PATH="/ProblemCountPerCategory.jsp"
+  SHAPE="304,146,0,0" SUBTYPE="jsp" TITLE="ProblemCountPerCategory.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page76" PATH="/SwitchCategoria.jsp"
+  SHAPE="304,146,0,0" SUBTYPE="jsp" TITLE="SwitchCategoria.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page77" PATH="/UserDetail.jsp" SHAPE="304,146,0,0"
+  SUBTYPE="jsp" TITLE="UserDetail.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page78" PATH="/SelectProfile.jsp"
+  SHAPE="1072,1874,0,0" SUBTYPE="jsp" TITLE="SelectProfile.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page79" PATH="/About.jsp" SHAPE="240,5970,0,0"
+  SUBTYPE="jsp" TITLE="About.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page80" PATH="/NotaDetail.jsp" SHAPE="304,146,0,0"
+  SUBTYPE="jsp" TITLE="NotaDetail.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page81" PATH="/DisabilitaEsperto.jsp"
+  SHAPE="304,146,0,0" SUBTYPE="jsp" TITLE="DisabilitaEsperto.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page82" PATH="/RepositoryUpdate.jsp"
+  SHAPE="240,6082,0,0" SUBTYPE="jsp" TITLE="RepositoryUpdate.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page83" PATH="/CreateStrutture.jsp"
+  SHAPE="304,146,0,0" SUBTYPE="jsp" TITLE="CreateStrutture.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page84" PATH="/Notoken.jsp" SHAPE="240,6194,0,0"
+  SUBTYPE="jsp" TITLE="Notoken.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page85" PATH="/AccessDenied.jsp"
+  SHAPE="240,6306,0,0" SUBTYPE="jsp" TITLE="AccessDenied.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page86" PATH="/DeleteFaqDetail.jsp"
+  SHAPE="304,146,0,0" SUBTYPE="jsp" TITLE="DeleteFaqDetail.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+</PROCESS>

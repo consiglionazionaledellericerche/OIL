@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+
+<form-validation>
+	<global/>
+	<formset>
+		<form name="Login">
+			<field property="login"
+			       depends="required">
+				<arg0 key="labels.Login"/>
+			</field>
+			<field property="password"
+			       depends="required">
+				<arg0 key="labels.Password"/>
+			</field>
+		</form>
+		<form name="CreateUser">
+			<field property="nome"
+			       depends="required">
+				<arg0 key="labels.FirstName"/>
+			</field>
+			<field property="cognome"
+			       depends="required">
+				<arg0 key="labels.FamilyName"/>
+			</field>
+			<field property="e_mail"
+			       depends="validwhen,email">
+				<arg0 key="labels.E-mail"/>
+				<var>
+					<var-name>test</var-name>
+					<var-value>((mail_stop == 'y') or (*this* != null))</var-value>
+				</var>
+			</field>
+			<field property="profilo"
+			       depends="required">
+				<arg0 key="labels.Profile"/>
+			</field>
+			<field property="login"
+			       depends="required">
+				<arg0 key="labels.Login"/>
+			</field>
+			<field property="password"
+			       depends="required">
+				<arg0 key="labels.Password"/>
+			</field>
+			<field property="struttura"
+			       depends="required">
+				<arg0 key="labels.Structure"/>
+			</field>
+			<field property="strutturaDescrizione"/>
+			<field property="mail_stop"/>
+		</form>
+		<form name="CreateCategory">
+			<field property="categoriaPadre"
+			       depends="required">
+				<arg0 key="labels.ParentCategory"/>
+			</field>
+			<field property="nome"
+			       depends="required">
+				<arg0 key="labels.CategoryName"/>
+			</field>
+			<field property="descrizione"
+			       depends="required">
+				<arg0 key="labels.CategoryDescription"/>
+			</field>
+		</form>
+		<form name="UpdateUser">
+			<field property="nome"
+			       depends="required">
+				<arg0 key="labels.FirstName"/>
+			</field>
+			<field property="cognome"
+			       depends="required">
+				<arg0 key="labels.FamilyName"/>
+			</field>
+			<field property="e_mail"
+			       depends="validwhen,email">
+				<arg0 key="labels.E-mail"/>
+				<var>
+					<var-name>test</var-name>
+					<var-value>((mail_stop == 'y') or (*this* != null))</var-value>
+				</var>
+			</field>
+			<field property="login"
+			       depends="required">
+				<arg0 key="labels.Login"/>
+			</field>
+			<field property="mail_stop"/>
+			<field property="struttura"
+			       depends="required">
+				<arg0 key="labels.Structure"/>
+			</field>
+		</form>
+		<form name="UpdateUserInfo">
+			<field property="nome"
+			       depends="required">
+				<arg0 key="labels.FirstName"/>
+			</field>
+			<field property="cognome"
+			       depends="required">
+				<arg0 key="labels.FamilyName"/>
+			</field>
+			<field property="e_mail"
+			       depends="validwhen,email">
+				<arg0 key="labels.E-mail"/>
+				<var>
+					<var-name>test</var-name>
+					<var-value>((mail_stop == 'y') or (*this* != null))</var-value>
+				</var>
+			</field>
+			<field property="mail_stop"/>
+			<field property="struttura"
+			       depends="required">
+				<arg0 key="labels.Structure"/>
+			</field>
+		</form>
+		<form name="changePassword">
+			<field property="oldpwd"
+			       depends="required">
+				<arg0 key="labels.OldPassword"/>
+			</field>
+			<field property="newpwd"
+			       depends="required,twofields">
+				<arg0 key="labels.NewPassword"/>
+				<var>
+					<var-name>secondProperty</var-name>
+					<var-value>newpwd2</var-value>
+				</var>
+				<arg1 key="labels.NewPassword2"/>
+			</field>
+			<field property="newpwd2"
+			       depends="required">
+				<arg0 key="labels.NewPassword2"/>
+			</field>
+		</form>
+		<form name="UpdateCategory">
+			<field property="nome"
+			       depends="required">
+				<arg0 key="labels.CategoryName"/>
+			</field>
+			<field property="descrizione"
+			       depends="required">
+				<arg0 key="labels.CategoryDescription"/>
+			</field>
+		</form>
+		<form name="CambioCategoria">
+			<field property="idSegnalazione"/>
+			<field property="idCategoria"/>
+			<field property="nomeCategoria"
+			       depends="required">
+				<arg0 key="labels.Category"/>
+			</field>
+			<field property="nota"/>
+		</form>
+		<form name="CreaFaq">
+			<field property="categoria"
+			       depends="required">
+				<arg0 key="labels.Category"/>
+			</field>
+			<field property="titolo"
+			       depends="required">
+				<arg0 key="labels.FaqTitle"/>
+			</field>
+			<field property="descrizione"
+			       depends="required">
+				<arg0 key="labels.FaqDescription"/>
+			</field>
+		</form>
+		<form name="UpdateFaqDetail">
+			<field property="titolo"
+			       depends="required">
+				<arg0 key="labels.FaqTitle"/>
+			</field>
+			<field property="descrizione"
+			       depends="required">
+				<arg0 key="labels.FaqDescription"/>
+			</field>
+			<field property="categoria"
+			       depends="required">
+				<arg0 key="labels.Category"/>
+			</field>
+		</form>
+		<form name="CreaSegnalazione">
+			<field property="descrizioneCategoria">
+				<arg0 key="labels.Category"/>
+			</field>
+			<field property="idCategoria"/>
+			<field property="titolo"
+			       depends="required">
+				<arg0 key="labels.Object"/>
+			</field>
+			<field property="descrizione"
+			       depends="required,maxlength">
+				<arg0 key="labels.Description"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3900</var-value>
+				</var>
+				<arg1 name="maxlength"
+				      key="${var:maxlength}"
+				      resource="false"/>
+			</field>
+			<field property="priorita"/>
+		</form>
+		<form name="CreaSegnalazioneEsperto">
+			<field property="idCategoria"/>
+			<field property="descrizioneCategoria">
+				<arg0 key="labels.Category"/>
+			</field>
+			<field property="titolo"
+			       depends="required">
+				<arg0 key="labels.Object"/>
+			</field>
+			<field property="descrizione"
+			       depends="required,maxlength">
+				<arg0 key="labels.Description"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3900</var-value>
+				</var>
+			</field>
+			<field property="priorita"/>
+			<field property="idUtente"
+			       depends="required">
+				<arg0 key="lists.profiles.User"/>
+			</field>
+		</form>
+	</formset>
+</form-validation>

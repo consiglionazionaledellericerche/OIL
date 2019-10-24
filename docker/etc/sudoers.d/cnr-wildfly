@@ -1,0 +1,7 @@
+# wildfly 
+Defaults:wildfly !requiretty
+wildfly ALL=NOPASSWD: /bin/systemctl restart wildfly8
+wildfly ALL=NOPASSWD: /bin/systemctl start wildfly8
+wildfly ALL=NOPASSWD: /bin/systemctl stop wildfly8
+wildfly ALL=NOPASSWD: /bin/rebuild_app
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="jasperbuilder"  default="compileReports"  basedir=".">
+
+<target name="compileReports" description="Compiles the JRXML templates into Jasper files.">
+		<taskdef name="jrc" classname="net.sf.jasperreports.ant.JRAntCompileTask">
+			<classpath>
+			  <fileset dir="../../../helpdesk/EarContent/lib">
+			    <include name="**/*.jar"/>
+			    <!-- <include name="jasperreports-1.2.6.jar"/>
+			    <include name="commons-digester.jar"/>
+			    <include name="commons-collections.jar"/>
+			    <include name="commons-beanutils-core.jar"/>
+			    <include name="commons-beanutils.jar"/>
+			    <include name="commons-beanutils-bean-collections.jar"/>
+			    <include name="commons-logging.jar"/> -->    
+			  </fileset>
+			</classpath>
+		</taskdef>
+		<jrc>
+			<src>
+				<fileset dir="reports">
+					<include name="**/*.jrxml" />
+				</fileset>
+			</src>
+		</jrc>
+</target>
+	
+</project>

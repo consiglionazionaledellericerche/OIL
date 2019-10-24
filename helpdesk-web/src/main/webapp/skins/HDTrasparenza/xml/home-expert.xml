@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<menu layout='1'>
+	<side-menu>
+		<group title='Links'>
+			<item href='http://www.performance.gov.it' target='_blank'>
+				Sito di riferimento
+			</item>
+			<item href='About.do'>
+				About
+			</item>
+		</group>
+		<group title='Messaggi agli utenti'>
+			<item href='CreateMessage.do' target='_blank'>
+				Aggiungi messaggio
+			</item>
+			<item href='ManageMessage.do'>
+				Gestisci messaggi
+			</item>
+		</group>
+	</side-menu>
+	<main-menu layout='1' groups='6'>
+		<group title='Gestione Segnalazioni'>
+			<item href='ProblemCountPerCategory.do?closed=NO'>
+				Segnalazioni pendenti
+			</item>
+			<item href='ProblemCountPerCategory.do?closed=YES'>
+				Segnalazioni chiuse (personali)
+			</item>
+			<item href='ProblemCountPerCategory.do?closed=VER'>
+				Segnalazioni verificate (personali)
+			</item>
+			<item href='ProblemCountPerCategory.do?closed=STO'>
+				Storico segnalazioni (tutte per categoria)
+			</item>
+			<item href='ExpertQBESettings.do'>
+				Ricerca Avanzata
+			</item>
+			<item href='GetCreaSegnalazioneEsperto.do'>
+				Invia segnalazione ad utenti
+			</item>
+		</group>
+		<group title='Info Utenti'>
+			<item href='InfoUtenti.do'>
+				Informazioni utenti
+			</item>
+		</group>
+		<group title='Gestione FAQ'>
+			<item href='GetCreaFaq.do'>
+				Crea FAQ
+			</item>
+			<item href='UpdateFaq.do'>
+				Modifica/Cancella FAQ 
+			</item>
+		</group>
+		<group title='Gestione del profilo personale'>
+			<item href='GetUpdateUserInfo.do'>
+				Modifica informazioni personali
+			</item>
+			<item href='GetChangePassword.do'>
+				Modifica password
+			</item>
+		</group>
+		<group title='Info Personali'>
+			<info class='text'>
+				Riferimento interno: <login/>
+			</info>
+			<info class='text'>
+				Nome : <nome/>
+			</info>
+			<info class='text'>
+				Cognome  : <cognome/>
+			</info>
+			<info class='text'>
+				E-mail : <e-mail/>
+			</info>
+		</group>
+		<group title='Statistiche'>
+			<item href='StatisticheDistribuzionePerStato.do'>
+				Distribuzione delle segnalazioni per stato
+			</item>
+			<item href='StatisticheDistribuzionePerCategoria.do'>
+				Distribuzione delle segnalazioni per categoria
+			</item>
+			<item href='StatisticheTempiRisposta.do'>
+				Statistiche tempi di risposta
+			</item>
+		</group>
+	</main-menu>
+</menu>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<menu layout='1'>
+	<side-menu>
+		<group title='Links'>
+			<item href='http:/www.performance.gov.it' target='_blank'>
+				Sito di riferimento
+			</item>
+			<item href='About.do'>
+				About
+			</item>
+		</group>
+	</side-menu>
+	<main-menu layout='1' groups='4'>
+		<group title='Gestione Segnalazioni'>
+			<item href='ProblemCountPerCategoryValidator.do?closed=NO'>
+				Segnalazioni pendenti
+			</item>
+			<item href='ProblemCountPerCategoryValidator.do?closed=YES'>
+				Segnalazioni chiuse (personali)
+			</item>
+		</group>
+		<group title='Reportistica segnalazioni'>
+			<item href='RepositoryQBE.do'>
+				Crea report segnalazioni
+			</item>
+			<item href='RepositoryUpdate.do'>
+				Gestione archivio report segnalazioni
+			</item>
+		</group>
+		<group title='Gestione del profilo personale'>
+			<item href='GetUpdateUserInfo.do'>
+				Modifica informazioni personali
+			</item>
+			<item href='GetChangePassword.do'>
+				Modifica password
+			</item>
+		</group>
+		<group title='Info Personali'>
+			<info class='text'>
+				Riferimento interno: <login/>
+			</info>
+			<info class='text'>
+				Nome : <nome/>
+			</info>
+			<info class='text'>
+				Cognome  : <cognome/>
+			</info>
+			<info class='text'>
+				E-mail : <e-mail/>
+			</info>
+		</group>
+	</main-menu>
+</menu>

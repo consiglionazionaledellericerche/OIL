@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<menu layout='1'>
+	<side-menu>
+		<group title='Links'>
+			<item href='http://www.performance.gov.it' target='_blank'>
+				Sito di riferimento
+			</item>
+			<item href='About.do'>
+				About
+			</item>
+		</group>
+		<group title='Messaggi agli utenti'>
+			<messages class='msgArea'/>
+		</group>
+	</side-menu>
+	<main-menu layout='1' groups='4'>
+		<group title='Gestione Segnalazioni'>
+			<item href='GetCreaSegnalazione.do'>
+				Crea segnalazione
+			</item>
+			<item href='UserQueueDetail.do?closed=NO'>
+				Visualizza segnalazioni pendenti
+			</item>
+			<item href='UserQueueDetail.do?closed=YES'>
+				Visualizza segnalazioni chiuse
+			</item>
+		</group>
+		<group title='Info Personali'>
+			<info class='text'>
+				Riferimento interno: <login/>
+			</info>
+			<info class='text'>
+				Nome : <nome/>
+			</info>
+			<info class='text'>
+				Cognome  : <cognome/>
+			</info>
+			<info class='text'>
+				E-mail : <e-mail/>
+			</info>
+		</group>		
+		<group title='Statistiche'>
+			<item href='StatisticheDistribuzionePerStato.do'>
+				Distribuzione delle segnalazioni per stato
+			</item>
+			<item href='StatisticheDistribuzionePerCategoria.do'>
+				Distribuzione delle segnalazioni per categoria
+			</item>
+			<item href='StatisticheTempiRisposta.do'>
+				Statistiche tempi di risposta
+			</item>
+		</group>
+	</main-menu>
+</menu>
